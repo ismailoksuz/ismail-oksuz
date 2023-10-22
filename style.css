@@ -1,0 +1,172 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.part{
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 10%;
+}
+
+
+#resume{
+    background-color: black;
+    color: white;
+}
+
+#certificates{
+    height: 200%;
+    background-color: #072227;
+    color: white;
+}
+
+#certificates img{
+    height: 100%;
+    width: 85%;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#awards{
+    background-color: #35858B;
+    font-size: 20px;
+    color: white;
+}
+
+#projects{
+    background-color: #4FBDBA;
+    font-size: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+
+#awards a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+#projects a{
+    transition: 0.5s;
+    text-decoration: none;
+    color:#11535f;
+    font-size: 20px;
+}
+
+#projects a:hover{
+    transition: 0.5s;
+    text-decoration: underline;
+    color: #AEFEFF;
+    font-size: 20px;
+}
+
+#resume h1{
+    text-align: center;
+}
+
+#hackerrankbutton{
+    text-align: center;
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+
+#hackerrankbutton a{
+    transform: scale(1);
+    transition: transform 0.5s;
+    text-decoration: none;
+    background-color: #35858B;
+    color: black;
+    border: 10px solid #35858B;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#hackerrankbutton a:hover{
+    text-decoration: none;
+    background-color: #072227;
+    color: white;
+    border: 10px solid #072227;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    transition: transform 0.5s;
+}
+
+#hackerrankbutton:hover {
+    transform: scale(1.3);
+    transition: transform 0.5s;
+}
+#getintouch{
+    background-color: #AEFEFF;
+    padding: 25%;
+}
+
+#getintouch a{
+    text-decoration: none;
+    color: black;
+}
+
+#getintouch svg{
+    transform: scale(1);
+    transition: transform 0.5s;
+    color: #072227;
+}
+
+#getintouch svg:hover{
+    transform: scale(1.5);
+    transition: transform 0.5s;
+    text-decoration: none;
+    color: #11535f;
+    
+}
+
+#certificates img:hover {
+    transform: scale(1.1); 
+    transition: transform 0.5s; 
+}
+
+/* #resumetext {
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+#resumetext:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
+} */
+
+.go-down {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.go-down a {
+    transition: 0.5s;
+    text-decoration: none;
+    color: #AEFEFF;
+}
+
+.go-down a:hover {
+    color: #35858B;
+}
+
+
