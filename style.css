@@ -5,10 +5,11 @@ html, body {
 }
 
 body {
-    scroll-behavior: smooth;
+    scroll-behavior:inherit;
 }
 
 .part{
+    position: relative;
     height: 100vh; 
     display: flex;
     align-items: center;
@@ -53,21 +54,14 @@ h2{
     text-align: center;
 }
 
-
-#awards a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
-#projects a{
+#projects .container a{
     transition: 0.5s;
     text-decoration: none;
     color:#11535f;
     font-size: 20px;
 }
 
-#projects a:hover{
+#projects .container a:hover{
     transition: 0.5s;
     text-decoration: underline;
     color: #AEFEFF;
@@ -117,18 +111,18 @@ h2{
     padding: 25%;
 }
 
-#getintouch a{
+#getintouch .container a{
     text-decoration: none;
     color: black;
 }
 
-#getintouch svg{
+#getintouch .container svg{
     transform: scale(1);
     transition: transform 0.5s;
     color: #072227;
 }
 
-#getintouch svg:hover{
+#getintouch .container svg:hover{
     transform: scale(1.5);
     transition: transform 0.5s;
     text-decoration: none;
@@ -153,20 +147,105 @@ h2{
 
 .go-down {
     position: absolute;
-    bottom: 10px; /* Adjust the distance from the bottom as needed */
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
 }
 
-
-.go-down a {
-    transition: 0.5s;
-    text-decoration: none;
-    color: #AEFEFF;
+.go-up {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.go-down a:hover {
+.go-down a{
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+#resume .go-down a {
+    color:#AEFEFF;
+}
+
+#resume .go-down a:hover {
     color: #35858B;
 }
 
+#certificates .go-down a{
+    color:#AEFEFF;
+}
 
+#certificates .go-up a{
+    color:#AEFEFF;
+}
+
+#certificates .go-down a:hover {
+    color: #35858B;
+}
+
+#certificates .go-up a:hover {
+    color: #35858B;
+}
+
+#awards .go-down a{
+    color:#AEFEFF;
+}
+
+#awards .go-up a{
+    color:#AEFEFF;
+}
+
+#awards .go-down a:hover {
+    color:#072227;
+}
+
+#awards .go-up a:hover {
+    color:#072227;
+}
+
+#projects .go-down a{
+    color:#11535f;
+}
+
+#projects .go-down a:hover {
+    color:#AEFEFF;
+}
+
+#projects .go-up a{
+    color:#11535f;
+}
+
+#projects .go-up a:hover {
+    color:#AEFEFF;
+}
+
+#getintouch .go-up a{
+    color: #35858B;
+}
+
+#getintouch .go-up a:hover{
+    color: #072227;
+}
+
+.go-down svg{
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.go-down svg:hover{
+    transform: scale(1.5);
+    transition: transform 0.5s;
+    text-decoration: none;
+}
+
+.go-up svg{
+    transform: scale(1);
+    transition: transform 0.5s;
+}
+
+.go-up svg:hover{
+    transform: scale(1.5);
+    transition: transform 0.5s;
+    text-decoration: none;
+}
