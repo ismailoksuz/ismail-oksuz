@@ -586,6 +586,12 @@
     #certificate-list{
         background-color: #072227;
         color: white;
+        font-size: 10px;
+    }
+
+    #certificate-list svg{
+        height: 10px;
+        width: 10px;
     }
 
     #certificate-list a{
