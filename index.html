@@ -11,6 +11,46 @@
 </head>
 <body class="text-gray-800">
 
+    <!-- Sabit Menü Butonu (Sol Üst Köşe) -->
+    <button id="menu-button" onclick="toggleDrawer()" class="p-3 bg-accent text-white rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
+        <i class="fas fa-bars text-xl"></i>
+    </button>
+
+    <!-- Soldan Açılır Menü (Drawer) -->
+    <div id="drawer" class="drawer bg-white p-6">
+        <div class="flex justify-between items-center mb-6 border-b pb-3">
+            <h3 class="text-xl font-bold accent-color">Menü</h3>
+            <button onclick="closeDrawer()" class="text-gray-500 hover:text-gray-800 transition">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+        <nav class="space-y-3">
+            <!-- Navigasyon Bağlantıları, scroll fix için JS ile handle edilecek -->
+            <a href="#about" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                <i class="fas fa-user-circle mr-3 w-5"></i> Hakkımda
+            </a>
+            <a href="#awards" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                <i class="fas fa-trophy mr-3 w-5"></i> Ödüller
+            </a>
+            <a href="#certificates" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                <i class="fas fa-certificate mr-3 w-5"></i> Sertifikalar & Eğitimler
+            </a>
+            <a href="#projects" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                <i class="fas fa-list-check mr-3 w-5"></i> Seçili Projeler
+            </a>
+            <a href="#other-projects" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                <i class="fas fa-toolbox mr-3 w-5"></i> Diğer Projeler
+            </a>
+            <a href="#contact" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                <i class="fas fa-phone mr-3 w-5"></i> İletişim
+            </a>
+        </nav>
+    </div>
+
+    <!-- Menü Arka Plan Karartıcısı (Backdrop) -->
+    <div id="backdrop" class="backdrop" onclick="closeDrawer()"></div>
+
+    <!-- Ana İçerik -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         <header class="text-center py-16 mb-12 bg-white rounded-2xl shadow-xl">
@@ -31,7 +71,7 @@
             </div>
         </header>
 
-        <section class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
+        <section id="about" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
             <h2 class="text-3xl font-bold accent-color mb-4 border-b-2 border-accent pb-2">Hakkımda</h2>
             <p class="text-lg leading-relaxed">
                 Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü'nden Haziran 2023'te mezun oldum. Yazılım geliştirme, yapay zeka ve sistem tasarımı konularında güçlü bir altyapıya sahibim. Özellikle dil modelleri ve otomasyon sistemleri alanındaki yetkinliğimle, **Prompt Mühendisliği (Prompt Engineering)** konusunda yüksek seviyede uzmanlığa sahibim. Hem teknik projeler geliştiren hem de kurumsal çözümlere odaklanan bir mühendisim.
@@ -53,7 +93,7 @@
             </div>
         </section>
 
-        <section class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
+        <section id="awards" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
             <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2">Ödüller</h2>
             
             <div class="flex items-start space-x-4">
@@ -66,7 +106,7 @@
             </div>
         </section>
         
-        <section class="mb-16">
+        <section id="certificates" class="mb-16">
             <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2">Sertifikalar ve Eğitimler</h2>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -145,7 +185,7 @@
             </div>
         </section>
         
-        <section class="mb-16">
+        <section id="projects" class="mb-16">
             <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2">Seçili Projeler</h2>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 
@@ -190,8 +230,8 @@
                 
             </div>
 
-            <div class="mt-12 p-8 bg-gray-100 rounded-2xl shadow-inner">
-                <h3 class="text-2xl font-bold text-gray-700 mb-6">Diğer Araçlar ve Uygulamalar</h3>
+            <div id="other-projects" class="mt-12 p-8 bg-gray-100 rounded-2xl shadow-inner">
+                <h3 class="text-2xl font-bold text-gray-700 mb-6">Diğer Projeler (Araçlar ve Uygulamalar)</h3>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     
@@ -311,7 +351,7 @@
         <footer class="text-center text-gray-500 pt-8 border-t border-gray-300">
             <p>&copy; 2025 İsmail Öksüz. Tüm hakları saklıdır.</p>
         </footer>
-
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
