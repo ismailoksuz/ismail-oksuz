@@ -28,7 +28,6 @@ body {
     background-color: #eff3f7;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-/* SOL TARAFTAN Açılır Menü (Drawer) için özel sınıflar */
 .drawer {
     position: fixed;
     top: 0;
