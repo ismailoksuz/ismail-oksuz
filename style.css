@@ -1,9 +1,9 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f7f9fc; 
+    background-color: #f7f9fc;
 }
 .accent-color {
-    color: #0077B6; 
+    color: #0077B6;
 }
 .bg-accent {
     background-color: #0077B6;
@@ -27,4 +27,42 @@ body {
 .project-item:hover {
     background-color: #eff3f7;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* SOL TARAFTAN Açılır Menü (Drawer) için özel sınıflar */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0; /* Sola hizalandı */
+    width: 300px;
+    height: 100%;
+    z-index: 50;
+    transform: translateX(-100%); /* Başlangıçta sola doğru tamamen gizli */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1); /* Gölge sağa doğru verildi */
+}
+.drawer.open {
+    transform: translateX(0);
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.backdrop.open {
+    opacity: 1;
+    visibility: visible;
+}
+/* Sabit Menü Butonu SOL ÜST KÖŞEYE alındı */
+#menu-button {
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem; /* Sola hizalandı */
+    z-index: 60;
 }
