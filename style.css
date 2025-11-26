@@ -31,13 +31,13 @@ body {
 .drawer {
     position: fixed;
     top: 0;
-    left: 0; /* Sola hizalandı */
+    left: 0;
     width: 300px;
     height: 100%;
     z-index: 50;
-    transform: translateX(-100%); /* Başlangıçta sola doğru tamamen gizli */
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
-    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1); /* Gölge sağa doğru verildi */
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
 }
 .drawer.open {
     transform: translateX(0);
@@ -58,10 +58,15 @@ body {
     opacity: 1;
     visibility: visible;
 }
-/* Sabit Menü Butonu SOL ÜST KÖŞEYE alındı */
 #menu-button {
     position: fixed;
     top: 1.5rem;
-    left: 1.5rem; /* Sola hizalandı */
+    left: 1.5rem;
+    z-index: 60;
+}
+#lang-toggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
     z-index: 60;
 }
