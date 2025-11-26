@@ -1,358 +1,345 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İsmail Öksüz | Bilgisayar Mühendisi & Prompt Mühendisi</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="text-gray-800">
-    <button id="menu-button" onclick="toggleDrawer()" class="p-3 bg-accent text-white rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
-        <i class="fas fa-bars text-xl"></i>
-    </button>
-    <div id="drawer" class="drawer bg-white p-6">
-        <div class="flex justify-between items-center mb-6 border-b pb-3">
-            <h3 class="text-xl font-bold accent-color">Menü</h3>
-            <button onclick="closeDrawer()" class="text-gray-500 hover:text-gray-800 transition">
-                <i class="fas fa-times text-2xl"></i>
-            </button>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title data-i18n="pageTitle">İsmail Öksüz | Bilgisayar Mühendisi & Prompt Mühendisi</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="text-gray-800">
+        <button id="menu-button" onclick="toggleDrawer()" class="p-3 bg-accent text-white rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    
+        <button id="lang-toggle" onclick="toggleLanguage()" class="p-3 bg-gray-700 text-white font-bold text-sm rounded-full shadow-lg hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500">
+            EN
+        </button>
+    
+        <div id="drawer" class="drawer bg-white p-6">
+            <div class="flex justify-between items-center mb-6 border-b pb-3">
+                <h3 class="text-xl font-bold accent-color" data-i18n="menuTitle">Menü</h3>
+                <button onclick="closeDrawer()" class="text-gray-500 hover:text-gray-800 transition">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="space-y-3">
+                <a href="#about" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                    <i class="fas fa-user-circle mr-3 w-5"></i> <span data-i18n="linkAbout">Hakkımda</span>
+                </a>
+                <a href="#awards" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                    <i class="fas fa-trophy mr-3 w-5"></i> <span data-i18n="linkAwards">Ödüller</span>
+                </a>
+                <a href="#certificates" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                    <i class="fas fa-certificate mr-3 w-5"></i> <span data-i18n="linkCertificates">Sertifikalar & Eğitimler</span>
+                </a>
+                <a href="#projects" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                    <i class="fas fa-list-check mr-3 w-5"></i> <span data-i18n="linkProjects">Seçili Projeler</span>
+                </a>
+                <a href="#other-projects-section" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                    <i class="fas fa-toolbox mr-3 w-5"></i> <span data-i18n="linkOtherProjects">Diğer Projeler</span>
+                </a>
+                <a href="#contact" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
+                    <i class="fas fa-phone mr-3 w-5"></i> <span data-i18n="linkContact">İletişim</span>
+                </a>
+            </nav>
         </div>
-        <nav class="space-y-3">
-            <a href="#about" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                <i class="fas fa-user-circle mr-3 w-5"></i> Hakkımda
-            </a>
-            <a href="#awards" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                <i class="fas fa-trophy mr-3 w-5"></i> Ödüller
-            </a>
-            <a href="#certificates" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                <i class="fas fa-certificate mr-3 w-5"></i> Sertifikalar & Eğitimler
-            </a>
-            <a href="#projects" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                <i class="fas fa-list-check mr-3 w-5"></i> Seçili Projeler
-            </a>
-            <a href="#other-projects" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                <i class="fas fa-toolbox mr-3 w-5"></i> Diğer Projeler
-            </a>
-            <a href="#contact" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                <i class="fas fa-phone mr-3 w-5"></i> İletişim
-            </a>
-        </nav>
-    </div>
-    <div id="backdrop" class="backdrop" onclick="closeDrawer()"></div>
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <header class="text-center py-16 mb-12 bg-white rounded-2xl shadow-xl">
-            <img src="https://avatars.githubusercontent.com/u/46068969?v=4" 
-                 alt="İsmail Öksüz Profil Resmi" 
-                 class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-[#0077B6] shadow-lg">
-            
-            <h1 class="text-5xl font-extrabold mb-2 tracking-tight">İsmail Öksüz</h1>
-            <p class="text-xl text-gray-600 font-medium">Bilgisayar Bilimleri Mühendisi | Prompt Mühendisliği Uzmanı</p>
-            
-            <div class="mt-6 flex justify-center space-x-4">
-                <a href="#contact" class="px-6 py-2 bg-accent text-white font-semibold rounded-full hover:bg-opacity-90 transition duration-300 shadow-md">
-                    <i class="fas fa-paper-plane mr-2"></i> İletişime Geç
-                </a>
-                <a href="https://ismailoksuz.github.io/Profile-Card/" target="_blank" class="px-6 py-2 border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md">
-                    <i class="fas fa-id-card mr-2"></i> Kartvizitim
-                </a>
-            </div>
-        </header>
-
-        <section id="about" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
-            <h2 class="text-3xl font-bold accent-color mb-4 border-b-2 border-accent pb-2">Hakkımda</h2>
-            <p class="text-lg leading-relaxed">
-                Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü'nden Haziran 2023'te mezun oldum. Yazılım geliştirme, yapay zeka ve sistem tasarımı konularında güçlü bir altyapıya sahibim. Özellikle dil modelleri ve otomasyon sistemleri alanındaki yetkinliğimle, **Prompt Mühendisliği (Prompt Engineering)** konusunda yüksek seviyede uzmanlığa sahibim. Hem teknik projeler geliştiren hem de kurumsal çözümlere odaklanan bir mühendisim.
-            </p>
-        </section>
-
-        <section class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift border-l-4 border-indigo-500">
-            <div class="flex items-start space-x-4">
-                <i class="fas fa-rocket text-4xl text-indigo-500 mt-1 flex-shrink-0"></i>
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Girişimcilik Projesi: NEXYOND</h2>
-                    <p class="text-gray-600 mb-3">
-                        Yazılım, Tasarım ve Yapay Zeka ile geleceği bugünden inşa eden, mobil/web çözümlere odaklanan dijital çözümler girişimi. (Girişim, Kimse Tarafından Bilinmeyen)
-                    </p>
-                    <a href="https://nexyond.vercel.app" target="_blank" class="text-indigo-500 font-semibold hover:underline flex items-center">
-                        Siteyi İncele <i class="fas fa-external-link-alt text-sm ml-2"></i>
+    
+        <div id="backdrop" class="backdrop" onclick="closeDrawer()"></div>
+    
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <header class="text-center py-16 mb-12 bg-white rounded-2xl shadow-xl">
+                <img src="https://avatars.githubusercontent.com/u/46068969?v=4" 
+                    alt="İsmail Öksüz Profil Resmi" 
+                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-[#0077B6] shadow-lg">
+                
+                <h1 class="text-5xl font-extrabold mb-2 tracking-tight">İsmail Öksüz</h1>
+                <p class="text-xl text-gray-600 font-medium" data-i18n="headerSubtitle">Bilgisayar Bilimleri Mühendisi | Prompt Mühendisliği Uzmanı</p>
+                
+                <div class="mt-6 flex justify-center space-x-4">
+                    <a href="#contact" class="px-6 py-2 bg-accent text-white font-semibold rounded-full hover:bg-opacity-90 transition duration-300 shadow-md" data-i18n="buttonContact">
+                        <i class="fas fa-paper-plane mr-2"></i> İletişime Geç
+                    </a>
+                    <a href="https://ismailoksuz.github.io/Profile-Card/" target="_blank" class="px-6 py-2 border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md" data-i18n="buttonCard">
+                        <i class="fas fa-id-card mr-2"></i> Kartvizitim
                     </a>
                 </div>
-            </div>
-        </section>
-
-        <section id="awards" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
-            <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2">Ödüller</h2>
-            
-            <div class="flex items-start space-x-4">
-                <i class="fas fa-trophy text-4xl accent-color mt-1 flex-shrink-0"></i>
-                <div>
-                    <h3 class="text-xl font-semibold">En İyi Bitirme Projesi Ödülü</h3>
-                    <p class="text-gray-600">Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü</p>
-                    <p class="text-sm text-gray-500">Haziran 2023</p>
-                </div>
-            </div>
-        </section>
-        
-        <section id="certificates" class="mb-16">
-            <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2">Sertifikalar ve Eğitimler</h2>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-                <a href="https://www.hackerrank.com/certificates/1f2e4145994a" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif1.png" alt="HackerRank Sertifikası 1" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.hackerrank.com/certificates/69bbc79119ee" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif2.png" alt="HackerRank Sertifikası 2" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.hackerrank.com/certificates/0e44b3bb1078" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif3.png" alt="HackerRank Sertifikası 3" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.hackerrank.com/certificates/90adf5cdc9b1" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif4.png" alt="HackerRank Sertifikası 4" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.udemy.com/certificate/UC-b2030bd3-bac3-4a66-a746-10cee6335023/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif5.png" alt="Udemy Sertifikası 5" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.udemy.com/certificate/UC-420ba578-ff98-4089-9dd8-8c933f892180/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif6.png" alt="Udemy Sertifikası 6" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.udemy.com/certificate/UC-8caade96-994b-46c0-a58d-c922e8cfa544/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif7.png" alt="Udemy Sertifikası 7" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.udemy.com/certificate/UC-51d73274-45d5-40b2-b551-23a36f1c1466/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif8.png" alt="Udemy Sertifikası 8" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.sololearn.com/certificates/CT-NSZKAUXY" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif17.jpg" alt="SoloLearn Sertifikası 17" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="https://www.sololearn.com/certificates/CT-8WMFDQ1J" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif18.png" alt="SoloLearn Sertifikası 18" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif9.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif9.jpg" alt="Sertifika 9" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif10.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif10.jpg" alt="Sertifika 10" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif11.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif11.jpg" alt="Sertifika 11" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif12.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif12.jpg" alt="Sertifika 12" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif13.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif13.jpg" alt="Sertifika 13" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif14.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif14.jpg" alt="Sertifika 14" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif15.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif15.jpg" alt="Sertifika 15" class="w-full h-auto rounded-lg object-cover">
-                </a>
-
-                <a href="src/certif16.png" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
-                    <img src="src/certif16.png" alt="Sertifika 16" class="w-full h-auto rounded-lg object-cover">
-                </a>
-            </div>
-        </section>
-        
-        <section id="projects" class="mb-16">
-            <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2">Seçili Projeler</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                
-                <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-[#0077B6]">
+            </header>
+    
+            <section id="about" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
+                <h2 class="text-3xl font-bold accent-color mb-4 border-b-2 border-accent pb-2" data-i18n="sectionAbout">Hakkımda</h2>
+                <p class="text-lg leading-relaxed" data-i18n="aboutText">
+                    Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü'nden Haziran 2023'te mezun oldum. Yazılım geliştirme, yapay zeka ve sistem tasarımı konularında güçlü bir altyapıya sahibim. Özellikle dil modelleri ve otomasyon sistemleri alanındaki yetkinliğimle, **Prompt Mühendisliği (Prompt Engineering)** konusunda yüksek seviyede uzmanlığa sahibim. Hem teknik projeler geliştiren hem de kurumsal çözümlere odaklanan bir mühendisim.
+                </p>
+            </section>
+    
+            <section class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift border-l-4 border-indigo-500">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-rocket text-4xl text-indigo-500 mt-1 flex-shrink-0"></i>
                     <div>
-                        <span class="text-sm font-semibold text-white bg-[#0077B6] px-3 py-1 rounded-full mb-3 inline-block">Akademik</span>
-                        <h3 class="text-xl font-bold mb-2">Soft Error Propagation on Graph Applications</h3>
-                        <p class="text-gray-600 mb-3">
-                            Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği 2023 En İyi Bitirme Projesi Ödülü'nü kazanan çalışma.
+                        <h2 class="text-3xl font-bold text-gray-800 mb-2" data-i18n="nexyondTitle">Girişimcilik Projesi: NEXYOND</h2>
+                        <p class="text-gray-600 mb-3" data-i18n="nexyondDesc">
+                            Yazılım, Tasarım ve Yapay Zeka ile geleceği bugünden inşa eden, mobil/web çözümlere odaklanan dijital çözümler girişimi. (Girişim, Kimse Tarafından Bilinmeyen)
                         </p>
+                        <a href="https://nexyond.vercel.app" target="_blank" class="text-indigo-500 font-semibold hover:underline flex items-center" data-i18n="nexyondLink">
+                            Siteyi İncele <i class="fas fa-external-link-alt text-sm ml-2"></i>
+                        </a>
                     </div>
-                    <a href="https://cse.eng.marmara.edu.tr/notice/2023-bahar-4-siniflar-veda-toplantisi" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center">
-                        Daha Fazla Bilgi <i class="fas fa-arrow-right text-sm ml-2"></i>
-                    </a>
                 </div>
-
-                <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-gray-500">
-                    <div>
-                        <span class="text-sm font-semibold text-white bg-gray-500 px-3 py-1 rounded-full mb-3 inline-block">Konferans Bildirisi</span>
-                        <h3 class="text-xl font-bold mb-2">A New Approach to Twitter Troll Detection</h3>
-                        <p class="text-gray-600 mb-3">
-                            WRFASE tarafından düzenlenen "International Conference on Computer Science, Machine Learning and Big Data (ICCSMLBD)" konferansına kabul edilen çalışma.
-                        </p>
-                    </div>
-                    <a href="#" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center">
-                        Bildiriye Erişim <i class="fas fa-arrow-right text-sm ml-2"></i>
-                    </a>
-                </div>
+            </section>
+    
+            <section id="awards" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
+                <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2" data-i18n="sectionAwards">Ödüller</h2>
                 
-                <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-green-600">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-trophy text-4xl accent-color mt-1 flex-shrink-0"></i>
                     <div>
-                        <span class="text-sm font-semibold text-white bg-green-600 px-3 py-1 rounded-full mb-3 inline-block">Kurumsal Web Uygulama</span>
-                        <h3 class="text-xl font-bold mb-2">Uludağ İçecek Kariyer Portalı</h3>
-                        <p class="text-gray-600 mb-3">
-                            Kurumsal bir proje olarak geliştirilen kariyer portalı uygulaması.
-                        </p>
+                        <h3 class="text-xl font-semibold" data-i18n="awardTitle">En İyi Bitirme Projesi Ödülü</h3>
+                        <p class="text-gray-600" data-i18n="awardInstitution">Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü</p>
+                        <p class="text-sm text-gray-500" data-i18n="awardDate">Haziran 2023</p>
                     </div>
-                    <a href="https://kariyer.uludagicecek.com.tr" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center">
-                        Projeye Erişim <i class="fas fa-arrow-right text-sm ml-2"></i>
-                    </a>
                 </div>
+            </section>
+            
+            <section id="certificates" class="mb-16">
+                <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2" data-i18n="sectionCertificates">Sertifikalar ve Eğitimler</h2>
                 
-            </div>
-            <div id="other-projects" class="mt-12 p-8 bg-gray-100 rounded-2xl shadow-inner">
-                <h3 class="text-2xl font-bold text-gray-700 mb-6">Diğer Projeler</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a href="https://github.com/ismailoksuz/CSE3063F22P1_GRP6" target="_blank" class="project-item">
-                        <i class="fas fa-graduation-cap mr-3 text-2xl text-sky-600 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Öğrenci Kayıt Sistemi (CSE3063)</span>
-                    </a> 
-                    <a href="https://github.com/ismailoksuz/Object-Detection-System-for-Vehicles" target="_blank" class="project-item">
-                        <i class="fas fa-car-side mr-3 text-2xl text-emerald-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Araçlar için Nesne Tespit Sistemi</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="https://www.hackerrank.com/certificates/1f2e4145994a" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif1.png" alt="HackerRank Sertifikası 1" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://github.com/ismailoksuz/HTTP-based-Room-Reservation" target="_blank" class="project-item">
-                        <i class="fas fa-calendar-alt mr-3 text-2xl text-rose-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">HTTP Tabanlı Oda Rezervasyon Sistemi</span>
+                    <a href="https://www.hackerrank.com/certificates/69bbc79119ee" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif2.png" alt="HackerRank Sertifikası 2" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://github.com/ismailoksuz/dice-webgl" target="_blank" class="project-item">
-                        <i class="fas fa-cube mr-3 text-2xl text-violet-600 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">dice-webgl</span>
+                    <a href="https://www.hackerrank.com/certificates/0e44b3bb1078" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif3.png" alt="HackerRank Sertifikası 3" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Profile-Card/" target="_blank" class="project-item">
-                        <i class="fas fa-address-card mr-3 text-2xl text-blue-400 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Dijital Kartvizit</span>
+                    <a href="https://www.hackerrank.com/certificates/90adf5cdc9b1" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif4.png" alt="HackerRank Sertifikası 4" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/ismail-oksuz/" target="_blank" class="project-item">
-                        <i class="fas fa-user-circle mr-3 text-2xl text-black w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Portfolyo Sayfam</span>
+                    <a href="https://www.udemy.com/certificate/UC-b2030bd3-bac3-4a66-a746-10cee6335023/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif5.png" alt="Udemy Sertifikası 5" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                </div>
-                <br>
-                <h3 class="text-2xl font-bold text-gray-700 mb-6">Browser Oyunları</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a href="https://ismailoksuz.github.io/XOX-Game/" target="_blank" class="project-item">
-                        <i class="fas fa-dice mr-3 text-2xl text-gray-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">XOX Game (Tic-Tac-Toe)</span>
+                    <a href="https://www.udemy.com/certificate/UC-420ba578-ff98-4089-9dd8-8c933f892180/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif6.png" alt="Udemy Sertifikası 6" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Neon-Brain-Pong/" target="_blank" class="project-item">
-                        <i class="fas fa-circle mr-3 text-2xl text-teal-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Neon Brain Pong</span>
+                    <a href="https://www.udemy.com/certificate/UC-8caade96-994b-46c0-a58d-c922e8cfa544/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif7.png" alt="Udemy Sertifikası 7" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                </div>
-                <br>
-                <h3 class="text-2xl font-bold text-gray-700 mb-6">Başlıca Araçlar</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a href="https://ismailoksuz.github.io/AI-Summarizer/" target="_blank" class="project-item">
-                        <i class="fas fa-brain mr-3 text-2xl text-indigo-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">AI Text Summarizer</span>
+                    <a href="https://www.udemy.com/certificate/UC-51d73274-45d5-40b2-b551-23a36f1c1466/" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif8.png" alt="Udemy Sertifikası 8" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/QR-Code-Generator/" target="_blank" class="project-item">
-                        <i class="fas fa-qrcode mr-3 text-2xl text-yellow-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">QR Code Generator</span>
+                    <a href="https://www.sololearn.com/certificates/CT-NSZKAUXY" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif17.jpg" alt="SoloLearn Sertifikası 17" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/VCard-QR-Generator/" target="_blank" class="project-item">
-                        <i class="fas fa-vcard mr-3 text-2xl text-red-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">VCard QR Generator</span>
+                    <a href="https://www.sololearn.com/certificates/CT-8WMFDQ1J" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif18.png" alt="SoloLearn Sertifikası 18" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Unit-Converter/" target="_blank" class="project-item">
-                        <i class="fas fa-calculator mr-3 text-2xl text-blue-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Unit Converter</span>
+                    <a href="src/certif9.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif9.jpg" alt="Sertifika 9" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Color-Palette-Generator/" target="_blank" class="project-item">
-                        <i class="fas fa-palette mr-3 text-2xl text-purple-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Color Palette Generator</span>
+                    <a href="src/certif10.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif10.jpg" alt="Sertifika 10" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Image-Resizer-Compressor/" target="_blank" class="project-item">
-                        <i class="fas fa-compress-alt mr-3 text-2xl text-cyan-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Image Resizer & Compressor</span>
+                    <a href="src/certif11.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif11.jpg" alt="Sertifika 11" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Code-Formatter-Beautifier/" target="_blank" class="project-item">
-                        <i class="fas fa-file-code mr-3 text-2xl text-orange-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Code Formatter & Beautifier</span>
+                    <a href="src/certif12.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif12.jpg" alt="Sertifika 12" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/JSON-XML-Viewer-Formatter/" target="_blank" class="project-item">
-                        <i class="fas fa-sitemap mr-3 text-2xl text-amber-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">JSON/XML Viewer & Formatter</span>
+                    <a href="src/certif13.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif13.jpg" alt="Sertifika 13" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/URL-Encoder-Decoder/" target="_blank" class="project-item">
-                        <i class="fas fa-link mr-3 text-2xl text-lime-600 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">URL Encoder Decoder</span>
+                    <a href="src/certif14.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif14.jpg" alt="Sertifika 14" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Base64-Encoder-Decoder/" target="_blank" class="project-item">
-                        <i class="fas fa-lock mr-3 text-2xl text-teal-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Base64 Encoder Decoder</span>
+                    <a href="src/certif15.jpg" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif15.jpg" alt="Sertifika 15" class="w-full h-auto rounded-lg object-cover">
                     </a>
-                    <a href="https://ismailoksuz.github.io/Text-Case-Converter/" target="_blank" class="project-item">
-                        <i class="fas fa-text-height mr-3 text-2xl text-green-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Text Case Converter</span>
-                    </a>
-                    <a href="https://ismailoksuz.github.io/Password-Strength-Tester/" target="_blank" class="project-item">
-                        <i class="fas fa-shield-alt mr-3 text-2xl text-red-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Password Strength Tester</span>
-                    </a>
-                    <a href="https://ismailoksuz.github.io/Random-Password-Generator/" target="_blank" class="project-item">
-                        <i class="fas fa-key mr-3 text-2xl text-pink-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Random Password Generator</span>
+                    <a href="src/certif16.png" target="_blank" class="block p-3 bg-white rounded-xl shadow-lg hover-lift transform transition duration-300">
+                        <img src="src/certif16.png" alt="Sertifika 16" class="w-full h-auto rounded-lg object-cover">
                     </a>
                 </div>
-            </div>
-            <a href="https://github.com/ismailoksuz" target="_blank" class="text-gray-800 font-bold hover:text-accent transition duration-300 flex items-center justify-center sm:justify-start mt-8 p-4 bg-white rounded-xl shadow-md hover-lift">
-                <i class="fab fa-github text-xl mr-2"></i> Diğer tüm projelerime GitHub profilim üzerinden erişebilirsiniz.
-            </a>
-
-        </section>
-
-        <section id="contact" class="mb-16 p-8 bg-white rounded-2xl shadow-xl border-b-4 border-gray-300">
-            <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2">İletişim</h2>
-            <p class="text-lg text-gray-600 mb-6">
-                Aşağıdaki kanallardan benimle iletişime geçmekten çekinmeyin. Size en kısa sürede geri döneceğim!
-            </p>
-            <div class="flex flex-col space-y-4">
-                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <i class="fas fa-envelope text-2xl accent-color w-6 text-center"></i>
-                    <a href="mailto:ismailoeksuez22@gmail.com" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">
-                        ismailoeksuez22@gmail.com
-                    </a>
+            </section>
+            
+            <section id="projects" class="mb-16">
+                <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2" data-i18n="sectionProjects">Seçili Projeler</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    
+                    <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-[#0077B6]">
+                        <div>
+                            <span class="text-sm font-semibold text-white bg-[#0077B6] px-3 py-1 rounded-full mb-3 inline-block" data-i18n="tagAcademic">Akademik</span>
+                            <h3 class="text-xl font-bold mb-2">Soft Error Propagation on Graph Applications</h3>
+                            <p class="text-gray-600 mb-3" data-i18n="projectDesc1">
+                                Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği 2023 En İyi Bitirme Projesi Ödülü'nü kazanan çalışma.
+                            </p>
+                        </div>
+                        <a href="https://cse.eng.marmara.edu.tr/notice/2023-bahar-4-siniflar-veda-toplantisi" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center" data-i18n="projectLink1">
+                            Daha Fazla Bilgi <i class="fas fa-arrow-right text-sm ml-2"></i>
+                        </a>
+                    </div>
+    
+                    <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-gray-500">
+                        <div>
+                            <span class="text-sm font-semibold text-white bg-gray-500 px-3 py-1 rounded-full mb-3 inline-block" data-i18n="tagConference">Konferans Bildirisi</span>
+                            <h3 class="text-xl font-bold mb-2">A New Approach to Twitter Troll Detection</h3>
+                            <p class="text-gray-600 mb-3" data-i18n="projectDesc2">
+                                WRFASE tarafından düzenlenen "International Conference on Computer Science, Machine Learning and Big Data (ICCSMLBD)" konferansına kabul edilen çalışma.
+                            </p>
+                        </div>
+                        <a href="#" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center" data-i18n="projectLink2">
+                            Bildiriye Erişim <i class="fas fa-arrow-right text-sm ml-2"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-green-600">
+                        <div>
+                            <span class="text-sm font-semibold text-white bg-green-600 px-3 py-1 rounded-full mb-3 inline-block" data-i18n="tagCorporate">Kurumsal Web Uygulama</span>
+                            <h3 class="text-xl font-bold mb-2" data-i18n="projectTitle3">Uludağ İçecek Kariyer Portalı</h3>
+                            <p class="text-gray-600 mb-3" data-i18n="projectDesc3">
+                                Kurumsal bir proje olarak geliştirilen kariyer portalı uygulaması.
+                            </p>
+                        </div>
+                        <a href="https://kariyer.uludagicecek.com.tr" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center" data-i18n="projectLink3">
+                            Projeye Erişim <i class="fas fa-arrow-right text-sm ml-2"></i>
+                        </a>
+                    </div>
+                    
                 </div>
-                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <i class="fab fa-linkedin text-2xl text-[#0A66C2] w-6 text-center"></i>
-                    <a href="https://www.linkedin.com/in/ismailoksuz/" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">
-                        LinkedIn Profilim
-                    </a>
+                <div id="other-projects-section" class="mt-12 p-8 bg-gray-100 rounded-2xl shadow-inner">
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6" data-i18n="sectionOtherProjects">Diğer Projeler</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <a href="https://github.com/ismailoksuz/CSE3063F22P1_GRP6" target="_blank" class="project-item">
+                            <i class="fas fa-graduation-cap mr-3 text-2xl text-sky-600 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="otherProj1">Öğrenci Kayıt Sistemi (CSE3063)</span>
+                        </a> 
+                        <a href="https://github.com/ismailoksuz/Object-Detection-System-for-Vehicles" target="_blank" class="project-item">
+                            <i class="fas fa-car-side mr-3 text-2xl text-emerald-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="otherProj2">Araçlar için Nesne Tespit Sistemi</span>
+                        </a>
+                        <a href="https://github.com/ismailoksuz/HTTP-based-Room-Reservation" target="_blank" class="project-item">
+                            <i class="fas fa-calendar-alt mr-3 text-2xl text-rose-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="otherProj3">HTTP Tabanlı Oda Rezervasyon Sistemi</span>
+                        </a>
+                        <a href="https://github.com/ismailoksuz/dice-webgl" target="_blank" class="project-item">
+                            <i class="fas fa-cube mr-3 text-2xl text-violet-600 w-6"></i>
+                            <span class="text-base font-medium text-gray-800">dice-webgl</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Profile-Card/" target="_blank" class="project-item">
+                            <i class="fas fa-address-card mr-3 text-2xl text-blue-400 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="otherProj5">Dijital Kartvizit</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/ismail-oksuz/" target="_blank" class="project-item">
+                            <i class="fas fa-user-circle mr-3 text-2xl text-black w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="otherProj6">Portfolyo Sayfam</span>
+                        </a>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6 mt-8" data-i18n="sectionBrowserGames">Browser Oyunları</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <a href="https://ismailoksuz.github.io/XOX-Game/" target="_blank" class="project-item">
+                            <i class="fas fa-dice mr-3 text-2xl text-gray-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="game1">XOX Game (Tic-Tac-Toe)</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Neon-Brain-Pong/" target="_blank" class="project-item">
+                            <i class="fas fa-circle mr-3 text-2xl text-teal-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="game2">Neon Brain Pong</span>
+                        </a>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-700 mb-6 mt-8" data-i18n="sectionTools">Başlıca Araçlar</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <a href="https://ismailoksuz.github.io/AI-Summarizer/" target="_blank" class="project-item">
+                            <i class="fas fa-brain mr-3 text-2xl text-indigo-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool1">AI Text Summarizer</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/QR-Code-Generator/" target="_blank" class="project-item">
+                            <i class="fas fa-qrcode mr-3 text-2xl text-yellow-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool2">QR Code Generator</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/VCard-QR-Generator/" target="_blank" class="project-item">
+                            <i class="fas fa-vcard mr-3 text-2xl text-red-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool3">VCard QR Generator</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Unit-Converter/" target="_blank" class="project-item">
+                            <i class="fas fa-calculator mr-3 text-2xl text-blue-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool4">Unit Converter</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Color-Palette-Generator/" target="_blank" class="project-item">
+                            <i class="fas fa-palette mr-3 text-2xl text-purple-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool5">Color Palette Generator</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Image-Resizer-Compressor/" target="_blank" class="project-item">
+                            <i class="fas fa-compress-alt mr-3 text-2xl text-cyan-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool6">Image Resizer & Compressor</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Code-Formatter-Beautifier/" target="_blank" class="project-item">
+                            <i class="fas fa-file-code mr-3 text-2xl text-orange-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool7">Code Formatter & Beautifier</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/JSON-XML-Viewer-Formatter/" target="_blank" class="project-item">
+                            <i class="fas fa-sitemap mr-3 text-2xl text-amber-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool8">JSON/XML Viewer & Formatter</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/URL-Encoder-Decoder/" target="_blank" class="project-item">
+                            <i class="fas fa-link mr-3 text-2xl text-lime-600 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool9">URL Encoder Decoder</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Base64-Encoder-Decoder/" target="_blank" class="project-item">
+                            <i class="fas fa-lock mr-3 text-2xl text-teal-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool10">Base64 Encoder Decoder</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Text-Case-Converter/" target="_blank" class="project-item">
+                            <i class="fas fa-text-height mr-3 text-2xl text-green-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool11">Text Case Converter</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Password-Strength-Tester/" target="_blank" class="project-item">
+                            <i class="fas fa-shield-alt mr-3 text-2xl text-red-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool12">Password Strength Tester</span>
+                        </a>
+                        <a href="https://ismailoksuz.github.io/Random-Password-Generator/" target="_blank" class="project-item">
+                            <i class="fas fa-key mr-3 text-2xl text-pink-500 w-6"></i>
+                            <span class="text-base font-medium text-gray-800" data-i18n="tool13">Random Password Generator</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                    <i class="fab fa-github text-2xl text-black w-6 text-center"></i>
-                    <a href="https://github.com/ismailoksuz" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">
-                        GitHub Profilim
-                    </a>
+                <a href="https://github.com/ismailoksuz" target="_blank" class="text-gray-800 font-bold hover:text-accent transition duration-300 flex items-center justify-center sm:justify-start mt-8 p-4 bg-white rounded-xl shadow-md hover-lift" data-i18n="githubCta">
+                    <i class="fab fa-github text-xl mr-2"></i> Diğer tüm projelerime GitHub profilim üzerinden erişebilirsiniz.
+                </a>
+    
+            </section>
+    
+            <section id="contact" class="mb-16 p-8 bg-white rounded-2xl shadow-xl border-b-4 border-gray-300">
+                <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2" data-i18n="sectionContact">İletişim</h2>
+                <p class="text-lg text-gray-600 mb-6" data-i18n="contactText">
+                    Aşağıdaki kanallardan benimle iletişime geçmekten çekinmeyin. Size en kısa sürede geri döneceğim!
+                </p>
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                        <i class="fas fa-envelope text-2xl accent-color w-6 text-center"></i>
+                        <a href="mailto:ismailoeksuez22@gmail.com" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">
+                            ismailoeksuez22@gmail.com
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                        <i class="fab fa-linkedin text-2xl text-[#0A66C2] w-6 text-center"></i>
+                        <a href="https://www.linkedin.com/in/ismailoksuz/" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300" data-i18n="linkedinLink">
+                            LinkedIn Profilim
+                        </a>
+                    </div>
+                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                        <i class="fab fa-github text-2xl text-black w-6 text-center"></i>
+                        <a href="https://github.com/ismailoksuz" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300" data-i18n="githubLink">
+                            GitHub Profilim
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
-
-        <footer class="text-center text-gray-500 pt-8 border-t border-gray-300">
-            <p>&copy; 2025 İsmail Öksüz. Tüm hakları saklıdır.</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
-</body>
+            </section>
+    
+            <footer class="text-center text-gray-500 pt-8 border-t border-gray-300">
+                <p>&copy; 2025 İsmail Öksüz. <span data-i18n="footerText">Tüm hakları saklıdır.</span></p>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
