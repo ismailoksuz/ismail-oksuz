@@ -10,13 +10,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-gray-800">
-
-    <!-- Sabit Menü Butonu (Sol Üst Köşe) -->
     <button id="menu-button" onclick="toggleDrawer()" class="p-3 bg-accent text-white rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
         <i class="fas fa-bars text-xl"></i>
     </button>
-
-    <!-- Soldan Açılır Menü (Drawer) -->
     <div id="drawer" class="drawer bg-white p-6">
         <div class="flex justify-between items-center mb-6 border-b pb-3">
             <h3 class="text-xl font-bold accent-color">Menü</h3>
@@ -25,7 +21,6 @@
             </button>
         </div>
         <nav class="space-y-3">
-            <!-- Navigasyon Bağlantıları, scroll fix için JS ile handle edilecek -->
             <a href="#about" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
                 <i class="fas fa-user-circle mr-3 w-5"></i> Hakkımda
             </a>
@@ -46,13 +41,8 @@
             </a>
         </nav>
     </div>
-
-    <!-- Menü Arka Plan Karartıcısı (Backdrop) -->
     <div id="backdrop" class="backdrop" onclick="closeDrawer()"></div>
-
-    <!-- Ana İçerik -->
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-
         <header class="text-center py-16 mb-12 bg-white rounded-2xl shadow-xl">
             <img src="https://avatars.githubusercontent.com/u/46068969?v=4" 
                  alt="İsmail Öksüz Profil Resmi" 
@@ -229,19 +219,60 @@
                 </div>
                 
             </div>
-
             <div id="other-projects" class="mt-12 p-8 bg-gray-100 rounded-2xl shadow-inner">
-                <h3 class="text-2xl font-bold text-gray-700 mb-6">Diğer Projeler (Araçlar ve Uygulamalar)</h3>
-                
+                <h3 class="text-2xl font-bold text-gray-700 mb-6">Diğer Projeler</h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    
+                    <a href="https://github.com/ismailoksuz/CSE3063F22P1_GRP6" target="_blank" class="project-item">
+                        <i class="fas fa-graduation-cap mr-3 text-2xl text-sky-600 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">Öğrenci Kayıt Sistemi (CSE3063)</span>
+                    </a> 
+                    <a href="https://github.com/ismailoksuz/Object-Detection-System-for-Vehicles" target="_blank" class="project-item">
+                        <i class="fas fa-car-side mr-3 text-2xl text-emerald-500 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">Araçlar için Nesne Tespit Sistemi</span>
+                    </a>
+                    <a href="https://github.com/ismailoksuz/HTTP-based-Room-Reservation" target="_blank" class="project-item">
+                        <i class="fas fa-calendar-alt mr-3 text-2xl text-rose-500 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">HTTP Tabanlı Oda Rezervasyon Sistemi</span>
+                    </a>
+                    <a href="https://github.com/ismailoksuz/dice-webgl" target="_blank" class="project-item">
+                        <i class="fas fa-cube mr-3 text-2xl text-violet-600 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">dice-webgl</span>
+                    </a>
+                    <a href="https://ismailoksuz.github.io/Profile-Card/" target="_blank" class="project-item">
+                        <i class="fas fa-address-card mr-3 text-2xl text-blue-400 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">Dijital Kartvizit</span>
+                    </a>
+                    <a href="https://ismailoksuz.github.io/ismail-oksuz/" target="_blank" class="project-item">
+                        <i class="fas fa-user-circle mr-3 text-2xl text-black w-6"></i>
+                        <span class="text-base font-medium text-gray-800">Portfolyo Sayfam</span>
+                    </a>
+                </div>
+                <br>
+                <h3 class="text-2xl font-bold text-gray-700 mb-6">Browser Oyunları</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <a href="https://ismailoksuz.github.io/XOX-Game/" target="_blank" class="project-item">
+                        <i class="fas fa-dice mr-3 text-2xl text-gray-500 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">XOX Game (Tic-Tac-Toe)</span>
+                    </a>
+                    <a href="https://ismailoksuz.github.io/Neon-Brain-Pong/" target="_blank" class="project-item">
+                        <i class="fas fa-circle mr-3 text-2xl text-teal-500 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">Neon Brain Pong</span>
+                    </a>
+                </div>
+                <br>
+                <h3 class="text-2xl font-bold text-gray-700 mb-6">Başlıca Araçlar</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     <a href="https://ismailoksuz.github.io/AI-Summarizer/" target="_blank" class="project-item">
                         <i class="fas fa-brain mr-3 text-2xl text-indigo-500 w-6"></i>
                         <span class="text-base font-medium text-gray-800">AI Text Summarizer</span>
                     </a>
                     <a href="https://ismailoksuz.github.io/QR-Code-Generator/" target="_blank" class="project-item">
                         <i class="fas fa-qrcode mr-3 text-2xl text-yellow-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">QR-Code-Generator</span>
+                        <span class="text-base font-medium text-gray-800">QR Code Generator</span>
+                    </a>
+                    <a href="https://ismailoksuz.github.io/VCard-QR-Generator/" target="_blank" class="project-item">
+                        <i class="fas fa-vcard mr-3 text-2xl text-red-500 w-6"></i>
+                        <span class="text-base font-medium text-gray-800">VCard QR Generator</span>
                     </a>
                     <a href="https://ismailoksuz.github.io/Unit-Converter/" target="_blank" class="project-item">
                         <i class="fas fa-calculator mr-3 text-2xl text-blue-500 w-6"></i>
@@ -283,41 +314,11 @@
                         <i class="fas fa-key mr-3 text-2xl text-pink-500 w-6"></i>
                         <span class="text-base font-medium text-gray-800">Random Password Generator</span>
                     </a>
-                    
-                    <a href="https://github.com/ismailoksuz/CSE3063F22P1_GRP6" target="_blank" class="project-item">
-                        <i class="fas fa-graduation-cap mr-3 text-2xl text-sky-600 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Öğrenci Kayıt Sistemi (CSE3063)</span>
-                    </a>
-                    <a href="https://github.com/ismailoksuz/Object-Detection-System-for-Vehicles" target="_blank" class="project-item">
-                        <i class="fas fa-car-side mr-3 text-2xl text-emerald-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Araçlar için Nesne Tespit Sistemi</span>
-                    </a>
-                    <a href="https://github.com/ismailoksuz/HTTP-based-Room-Reservation" target="_blank" class="project-item">
-                        <i class="fas fa-calendar-alt mr-3 text-2xl text-rose-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">HTTP Tabanlı Oda Rezervasyon Sistemi</span>
-                    </a>
-                    <a href="https://github.com/ismailoksuz/dice-webgl" target="_blank" class="project-item">
-                        <i class="fas fa-cube mr-3 text-2xl text-violet-600 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">dice-webgl (3D Zar Oyunu)</span>
-                    </a>
-                    <a href="https://ismailoksuz.github.io/XOX-Game/" target="_blank" class="project-item">
-                        <i class="fas fa-dice mr-3 text-2xl text-gray-500 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">XOX-Game (Tic-Tac-Toe)</span>
-                    </a>
-                    <a href="https://ismailoksuz.github.io/Profile-Card/" target="_blank" class="project-item">
-                        <i class="fas fa-address-card mr-3 text-2xl text-blue-400 w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Dijital Kartvizit</span>
-                    </a>
-                    <a href="https://ismailoksuz.github.io/ismail-oksuz/" target="_blank" class="project-item">
-                        <i class="fas fa-user-circle mr-3 text-2xl text-black w-6"></i>
-                        <span class="text-base font-medium text-gray-800">Portfolyo Sayfam</span>
-                    </a>
                 </div>
-                
-                <a href="https://github.com/ismailoksuz" target="_blank" class="text-gray-800 font-bold hover:text-accent transition duration-300 flex items-center justify-center sm:justify-start mt-8 p-4 bg-white rounded-xl shadow-md hover-lift">
-                    <i class="fab fa-github text-xl mr-2"></i> Diğer tüm projelerime GitHub profilim üzerinden erişebilirsiniz.
-                </a>
             </div>
+            <a href="https://github.com/ismailoksuz" target="_blank" class="text-gray-800 font-bold hover:text-accent transition duration-300 flex items-center justify-center sm:justify-start mt-8 p-4 bg-white rounded-xl shadow-md hover-lift">
+                <i class="fab fa-github text-xl mr-2"></i> Diğer tüm projelerime GitHub profilim üzerinden erişebilirsiniz.
+            </a>
 
         </section>
 
