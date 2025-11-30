@@ -1,5 +1,6 @@
 const translations = {
     en: {
+        hackerRankLink: "My HackerRank Profile",
         pageTitle: "İsmail Öksüz | Computer Engineer & Prompt Engineer",
         headerSubtitle: "Computer Science Engineer | Prompt Engineering Expert",
         buttonContact: "Get in Touch",
@@ -50,6 +51,7 @@ const translations = {
         footerText: "All rights reserved."
     },
     tr: {
+        hackerRankLink: "HackerRank Profilim",
         pageTitle: "İsmail Öksüz | Bilgisayar Mühendisi & Prompt Mühendisi",
         headerSubtitle: "Bilgisayar Bilimleri Mühendisi | Prompt Mühendisliği Uzmanı",
         buttonContact: "İletişime Geç",
