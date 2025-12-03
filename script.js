@@ -48,9 +48,17 @@ const translations = {
         contactText: "Feel free to contact me through the channels below. I will get back to you as soon as possible!",
         linkedinLink: "My LinkedIn Profile",
         githubLink: "My GitHub Profile",
-        footerText: "All rights reserved."
+        footerText: "All rights reserved.",
+        otherProjEAFC: "EA FC26 DataHub",
+        otherProjF1Data: "Formula 1 Data Analysis Hub", 
+        otherProjQR: "QR Code Generator Plus",
+        otherProjRust: "Rust CLI Utilities"
     },
     tr: {
+        otherProjEAFC: "EA FC26 Veri Merkezi",
+        otherProjF1Data: "Formula 1 Veri Analizi Merkezi",
+        otherProjQR: "QR Kodu Üretici (Gelişmiş)",
+        otherProjRust: "Rust CLI Araçları",
         hackerRankLink: "HackerRank Profilim",
         pageTitle: "İsmail Öksüz | Bilgisayar Mühendisi & Prompt Mühendisi",
         headerSubtitle: "Bilgisayar Bilimleri Mühendisi | Prompt Mühendisliği Uzmanı",
