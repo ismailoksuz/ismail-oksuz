@@ -48,13 +48,16 @@ const translations = {
         contactText: "Feel free to contact me through the channels below. I will get back to you as soon as possible!",
         linkedinLink: "My LinkedIn Profile",
         githubLink: "My GitHub Profile",
+        kaggleLink: "My Kaggle Profile",
         footerText: "All rights reserved.",
         otherProjEAFC: "EA FC26 DataHub",
         otherProjF1Data: "Formula 1 Data Analysis Hub", 
         otherProjQR: "QR Code Generator Plus",
-        otherProjRust: "Rust CLI Utilities"
+        otherProjRust: "Rust CLI Utilities",
+        otherProjRailTransitData: "Global Urban Rail Transit Data & UI"
     },
     tr: {
+        otherProjRailTransitData: "Küresel Kentsel Raylı Ulaşım Veri Paneli ve Görselleştirme Arayüzü",
         otherProjEAFC: "EA FC26 Veri Merkezi",
         otherProjF1Data: "Formula 1 Veri Analizi Merkezi",
         otherProjQR: "QR Kodu Üretici (Gelişmiş)",
@@ -107,6 +110,7 @@ const translations = {
         contactText: "Aşağıdaki kanallardan benimle iletişime geçmekten çekinmeyin. Size en kısa sürede geri döneceğim!",
         linkedinLink: "LinkedIn Profilim",
         githubLink: "GitHub Profilim",
+        kaggleLink: "Kaggle Profilim",
         footerText: "Tüm hakları saklıdır."
     }
 };
