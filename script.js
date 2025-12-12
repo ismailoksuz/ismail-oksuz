@@ -54,9 +54,19 @@ const translations = {
         otherProjF1Data: "Formula 1 Data Analysis Hub", 
         otherProjQR: "QR Code Generator Plus",
         otherProjRust: "Rust CLI Utilities",
-        otherProjRailTransitData: "Global Urban Rail Transit Data & UI"
+        otherProjRailTransitData: "Global Urban Rail Transit Data & UI",
+        otherProjPersonaAIChat: "Persona AI Chat UI (With custom personas and moods)",
+        otherProjFWC26: "FIFA World Cup 2026 Predictor",
+        otherProjAIWAS: "AI Powered Workflow Automation System (Shell)",
+        otherProjForza: "FH5 (Forza Horizon 5) Car Performance Analyzer with AI",
+        otherProjPhoneCompare: "Phone Technical Specs and Comparision Website (13289 devices)"
     },
     tr: {
+        otherProjPersonaAIChat: "Persona AI Sohbet Arayüzü (Kişiselleştirilebilir)",
+        otherProjFWC26: "FIFA Dünya Kupası 2026 Tahmin Sitesi",
+        otherProjAIWAS: "AI Destekli İş Akışı Otomasyon Sistemi (Shell)",
+        otherProjForza: "AI Destekli FH5 (Forza Horizon 5) Araç Performans Analizleri",
+        otherProjPhoneCompare: "Telefon Teknik Özellikleri ve Karşılaştırma Sitesi (13.289 cihaz)",
         otherProjRailTransitData: "Küresel Kentsel Raylı Ulaşım Veri Paneli ve Görselleştirme Arayüzü",
         otherProjEAFC: "EA FC26 Veri Merkezi",
         otherProjF1Data: "Formula 1 Veri Analizi Merkezi",
