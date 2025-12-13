@@ -59,9 +59,11 @@ const translations = {
         otherProjFWC26: "FIFA World Cup 2026 Predictor",
         otherProjAIWAS: "AI Powered Workflow Automation System (Shell)",
         otherProjForza: "FH5 (Forza Horizon 5) Car Performance Analyzer with AI",
-        otherProjPhoneCompare: "Phone Technical Specs and Comparision Website (13289 devices)"
+        otherProjPhoneCompare: "Phone Technical Specs and Comparision Website (13289 devices)",
+        otherProjNBA: "NBA AI Predictive Modeling"
     },
     tr: {
+        otherProjNBA: "NBA AI Tahmin Modellemesi",
         otherProjPersonaAIChat: "Persona AI Sohbet Arayüzü (Kişiselleştirilebilir)",
         otherProjFWC26: "FIFA Dünya Kupası 2026 Tahmin Sitesi",
         otherProjAIWAS: "AI Destekli İş Akışı Otomasyon Sistemi (Shell)",
