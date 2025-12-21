@@ -60,9 +60,15 @@ const translations = {
         otherProjAIWAS: "AI Powered Workflow Automation System (Shell)",
         otherProjForza: "FH5 (Forza Horizon 5) Car Performance Analyzer with AI",
         otherProjPhoneCompare: "Phone Technical Specs and Comparision Website (13289 devices)",
-        otherProjNBA: "NBA AI Predictive Modeling"
+        otherProjNBA: "NBA AI Predictive Modeling",
+        otherProjShellMac: "Comprehensive Shell Scripts for Mac",
+        otherProjMFTest: "Math & Science Test Site & AI Question Generator",
+        otherProjCrypto: "Real Time Crypto Dashboard UI"
     },
     tr: {
+        otherProjShellMac: "Gelişmiş Shell Skriptleri (Mac için)",
+        otherProjMFTest: "Sayisal Test Sitesi & AI Soru Üretici",
+        otherProjCrypto: "Gerçek Zamanlı Kripto Dashboard UI",
         otherProjNBA: "NBA AI Tahmin Modellemesi",
         otherProjPersonaAIChat: "Persona AI Sohbet Arayüzü (Kişiselleştirilebilir)",
         otherProjFWC26: "FIFA Dünya Kupası 2026 Tahmin Sitesi",
