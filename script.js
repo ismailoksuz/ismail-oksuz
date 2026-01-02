@@ -1,5 +1,13 @@
 const translations = {
     en: {
+        pageTitle: "ISMAIL OKSUZ",
+        sectionProfiles: "Technical Profiles",
+        sectionContact: "Contact",
+        filterAll: "All",
+        filterSoftware: "Software & Language",
+        filterData: "Database & SQL",
+        filterAI: "AI & Prompt",
+        filterParticipation: "Events & Summits",
         hackerRankLink: "My HackerRank Profile",
         pageTitle: "İsmail Öksüz | Computer Engineer & Prompt Engineer",
         headerSubtitle: "Computer Science Engineer | Prompt Engineering Expert",
@@ -13,7 +21,7 @@ const translations = {
         linkOtherProjects: "Other Projects",
         linkContact: "Contact",
         sectionAbout: "About Me",
-        aboutText: "I graduated from Marmara University Faculty of Engineering, Department of Computer Science and Engineering in June 2023. I have a strong background in software development, artificial intelligence, and system design. With my proficiency, especially in large language models and automation systems, I possess a high level of expertise in **Prompt Engineering**. I am an engineer who develops both technical projects and focuses on corporate solutions.",
+        aboutText: "I graduated from Marmara University with a degree in Computer Engineering in October 2023. My engineering approach is driven by high mathematical intelligence and sharp analytical reasoning. I possess advanced proficiency in solving complex algorithmic problems and designing optimized systems. I have developed code across both corporate infrastructures and various independent freelance projects. I leverage Advanced Prompt Engineering and AI methodologies as a core expertise to accelerate software architecture and maximize efficiency. I am a results-oriented engineer with a solid foundation in algorithm design and system optimization.",
         nexyondTitle: "Entrepreneurship Project: NEXYOND",
         nexyondDesc: "A digital solutions venture focusing on mobile/web solutions, building the future today with Software, Design, and Artificial Intelligence. (The venture is not publicly known)",
         nexyondLink: "View Site",
@@ -66,6 +74,14 @@ const translations = {
         otherProjCrypto: "Real Time Crypto Dashboard UI"
     },
     tr: {
+        pageTitle: "ISMAIL OKSUZ",
+        sectionProfiles: "Teknik Profiller",
+        sectionContact: "İletişim",
+        filterAll: "Hepsi",
+        filterSoftware: "Yazılım & Dil",
+        filterData: "Veritabanı & SQL",
+        filterAI: "Yapay Zeka & Prompt",
+        filterParticipation: "Katılım & Zirveler",
         otherProjShellMac: "Gelişmiş Shell Skriptleri (Mac için)",
         otherProjMFTest: "Sayisal Test Sitesi & AI Soru Üretici",
         otherProjCrypto: "Gerçek Zamanlı Kripto Dashboard UI",
@@ -93,7 +109,7 @@ const translations = {
         linkOtherProjects: "Diğer Projeler",
         linkContact: "İletişim",
         sectionAbout: "Hakkımda",
-        aboutText: "Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü'nden Haziran 2023'te mezun oldum. Yazılım geliştirme, yapay zeka ve sistem tasarımı konularında güçlü bir altyapıya sahibim. Özellikle dil modelleri ve otomasyon sistemleri alanındaki yetkinliğimle, **Prompt Mühendisliği (Prompt Engineering)** konusunda yüksek seviyede uzmanlığa sahibim. Hem teknik projeler geliştiren hem de kurumsal çözümlere odaklanan bir mühendisim.",
+        aboutText: "Marmara Üniversitesi Bilgisayar Mühendisliği bölümünden Ekim 2023'te mezun oldum. Mühendislik yaklaşımımı yüksek matematiksel zeka ve keskin bir analitik düşünme yapısı üzerine kuruyorum. Karmaşık algoritma problemlerini çözme ve optimize sistemler tasarlama konusunda ileri seviye yetkinliğe sahibim. Hem kurumsal altyapılarda hem de çeşitli freelance projelerde kod geliştirdim. Advanced Prompt Engineering ve yapay zeka araçlarını sadece birer yardımcı değil, yazılım mimarisini hızlandıran ve verimliliği maksimize eden bir uzmanlık alanı olarak kullanıyorum. Temeli sağlam, algoritma ve sonuç odaklı bir mühendisim.",
         nexyondTitle: "Girişimcilik Projesi: NEXYOND",
         nexyondDesc: "Yazılım, Tasarım ve Yapay Zeka ile geleceği bugünden inşa eden, mobil/web çözümlere odaklanan dijital çözümler girişimi. (Girişim, Kimse Tarafından Bilinmeyen)",
         nexyondLink: "Siteyi İncele",
@@ -148,6 +164,28 @@ function updateContent() {
     document.querySelector('title').textContent = langData.pageTitle;
     document.documentElement.lang = currentLang;
     document.getElementById('lang-toggle').textContent = currentLang === 'tr' ? 'EN' : 'TR';
+}
+
+function filterCerts(category) {
+    const items = document.querySelectorAll('.cert-item');
+    const buttons = document.querySelectorAll('.cert-filter-btn');
+
+    buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-accent', 'text-white');
+        btn.classList.add('bg-gray-200', 'text-gray-700');
+    });
+
+    const activeBtn = event.currentTarget;
+    activeBtn.classList.add('active', 'bg-accent', 'text-white');
+    activeBtn.classList.remove('bg-gray-200');
+
+    items.forEach(item => {
+        if (category === 'all' || item.classList.contains(category)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
 }
 
 function toggleLanguage() {

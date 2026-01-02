@@ -96,3 +96,18 @@ body {
 .fa-database {
     color: #1D4ED8;
 }
+
+.cert-filter-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #e5e7eb;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.cert-filter-btn.active {
+    background-color: #0077B6;
+    color: white;
+}
