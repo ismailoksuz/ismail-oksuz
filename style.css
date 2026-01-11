@@ -111,3 +111,9 @@ body {
     background-color: #0077B6;
     color: white;
 }
+
+#all-projects-container .group {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}

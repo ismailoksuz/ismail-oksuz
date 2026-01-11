@@ -1,0 +1,47 @@
+{
+    "Global-Urban-Rail-Transit-Data-UI":{
+        "name_en":"Global Urban Rail Transit Data UI",
+        "name_tr":"Küresel Kentsel Raylı Ulaşım Veri Paneli",
+        "url":"https://ismailoksuz.github.io/Global-Urban-Rail-Transit-Data-UI/"
+    },
+    "Real-Time-Crypto-Dashboard":{
+        "name_en":"Real Time Crypto Dashboard",
+        "name_tr":"Canlı Kripto Dashboardı",
+        "url":"https://real-time-crypto-dashboard-phi.vercel.app"
+    },
+    "Phone-Compare":{
+        "name_en":"Phone Comparison",
+        "name_tr":"Telefon Kıyaslama",
+        "url":"https://phone-compare-eight.vercel.app"
+    },
+    "FIFA-World-Cup-2026-Predictor":{
+        "name_en":"FIFA World Cup 2026 Predictor",
+        "name_tr":"FIFA Dünya Kupası 2026 Tahmin Sitesi",
+        "url":"https://ismailoksuz.github.io/FIFA-World-Cup-2026-Predictor/"
+    },
+    "iso-browser-games":{
+        "name_en":"Browser Games",
+        "name_tr":"Tarayıcı Oyunları",
+        "url":"https://ismailoksuz.github.io/iso-browser-games/"
+    },
+    "Developer-Toolkit":{
+        "name_en":"Developer Toolkit",
+        "name_tr":"Geliştirici Araçları",
+        "url":"https://ismailoksuz.github.io/Developer-Toolkit/"
+    },
+    "Sayisal-Test-AI":{
+        "name_en":"Math & Science Test",
+        "name_tr":"Sayısal Test",
+        "url":"https://ismailoksuz.github.io/Sayisal-Test-AI/"
+    },
+    "Back-to-2016":{
+        "name_en":"Back to 2016",
+        "name_tr":"2016'ya Dönüş",
+        "url":"https://ismailoksuz.github.io/Back-to-2016/"
+    },
+    "qr-code-generator-plus":{
+        "name_en":"Advanced QR Code Generator",
+        "name_tr":"Gelişmiş QR Kod Oluşturucu",
+        "url":"https://qr-code-generator-plus.vercel.app"
+    }
+}

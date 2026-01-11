@@ -1,0 +1,177 @@
+{
+    "Student Registration System":{
+        "name_en":"Student Registration System",
+        "name_tr":"Öğrenci Kayıt Sistemi",
+        "url":"https://github.com/ismailoksuz/CSE3063F22P1_GRP6",
+        "used_languages":["Java","Python"],
+        "tags":["Systems"]
+    },
+    "Object-Detection-System-for-Vehicles":{
+        "name_en":"Object Detection System for Vehicles",
+        "name_tr":"Araç Tipi Tespit Sistemi",
+        "url":"https://github.com/ismailoksuz/Object-Detection-System-for-Vehicles",
+        "used_languages":["Python"],
+        "tags":["Machine Learning","Computer Vision"]
+    },
+    "Real-Time-Crypto-Dashboard":{
+        "name_en":"Real Time Crypto Dashboard",
+        "name_tr":"Canlı Kripto Dashboardı",
+        "url":"https://github.com/ismailoksuz/Real-Time-Crypto-Dashboard",
+        "used_languages":["Typescript"],
+        "tags":["Data","Web","UI"]
+    },
+    "EAFC26-DataHub":{
+        "name_en":"EA FC26 Data Hub",
+        "name_tr":"EA FC26 Veri Merkezi",
+        "url":"https://github.com/ismailoksuz/EAFC26-DataHub",
+        "used_languages":["Python"],
+        "tags":["Data","UI"]
+    },
+    "Formula1-Data-Analysis-Hub":{
+        "name_en":"Formula1 Data Analysis Hub",
+        "name_tr":"Formula1 Veri Analizi",
+        "url":"https://github.com/ismailoksuz/Formula1-Data-Analysis-Hub",
+        "used_languages":["Python"],
+        "tags":["Data","UI"]
+    },
+    "Global-Urban-Rail-Transit-Data-UI":{
+        "name_en":"Global Urban Rail Transit Data & UI",
+        "name_tr":"Küresel Kentsel Raylı Ulaşım Veri Paneli ve Görselleştirme Arayüzü",
+        "url":"https://github.com/ismailoksuz/Global-Urban-Rail-Transit-Data-UI",
+        "used_languages":["Python","HTML","CSS","Javascript"],
+        "tags":["Web","UI","Data"]
+    },
+    "NBA-AI-Predictive-Modeling":{
+        "name_en":"NBA AI Predictive Modeling",
+        "name_tr":"NBA AI Tahmin Modeli",
+        "url":"https://github.com/ismailoksuz/NBA-AI-Predictive-Modeling",
+        "used_languages":["Python"],
+        "tags":["Data","Machine Learning"]
+    },
+    "Otomobil-Kronik-Ariza-Rehberi-AI":{
+        "name_en":"Automobile Chronic Breakdown Guide AI",
+        "name_tr":"Otomobil-Kronik-Ariza-Rehberi-AI",
+        "url":"https://github.com/ismailoksuz/Otomobil-Kronik-Ariza-Rehberi-AI",
+        "used_languages":["Python","HTML","CSS","Javascript"],
+        "tags":["AI","UI"]
+    },
+    "Persona-AI-Chat":{
+        "name_en":"Customizable AI Chat",
+        "name_tr":"Kişiselleştirilebilir AI Sohbet",
+        "url":"https://github.com/ismailoksuz/Persona-AI-Chat",
+        "used_languages":["Python","HTML","CSS","Javascript"],
+        "tags":["AI","UI"]
+    },
+    "FIFA-World-Cup-2026-Predictor":{
+        "name_en":"FIFA World Cup 2026 Predictor",
+        "name_tr":"FIFA Dünya Kupası 2026 Tahmin Sitesi",
+        "url":"https://github.com/ismailoksuz/FIFA-World-Cup-2026-Predictor",
+        "used_languages":["HTML","CSS","Javascript"],
+        "tags":["Web","UI"]
+    },
+    "Sayisal-Test-AI":{
+        "name_en":"Test Generator Website & AI Test Generator",
+        "name_tr":"Sayisal Test Sitesi & AI Soru Üretici",
+        "url":"https://github.com/ismailoksuz/Sayisal-Test-AI",
+        "used_languages":["Python","HTML","CSS","Javascript"],
+        "tags":["AI","Web","UI"]
+    },
+    "Database Application For Building Managements":{
+        "name_en":"Database Application For Building Managements",
+        "name_tr":"Bina Yönetimi Veritabanı Uygulaması",
+        "url":"https://github.com/ismailoksuz/Marmara-CSE/tree/main/CSE3055%20-%20Database%20System/Database%20Application%20For%20Building%20Managements",
+        "used_languages":["MSSQL"],
+        "tags":["Systems","Database"]
+    },
+    "Comprehensive-Shell-Scripts-Mac":{
+        "name_en":"Comprehensive Shell Scripts (For Mac OS)",
+        "name_tr":"Gelişmiş Shell Skriptleri (Mac OS)",
+        "url":"https://github.com/ismailoksuz/Comprehensive-Shell-Scripts-Mac",
+        "used_languages":["Shell"],
+        "tags":["Tools","Systems"]
+    },
+    "AI-Powered-Workflow-Automation-System":{
+        "name_en":"AI Powered Workflow Automation System",
+        "name_tr":"AI Destekli İş Akışı Otomasyon Sistemi",
+        "url":"https://github.com/ismailoksuz/AI-Powered-Workflow-Automation-System",
+        "used_languages":["Python","Shell"],
+        "tags":["AI","Tools"]
+    },
+    "FH5-Car-Performance-Analyzer-with-AI":{
+        "name_en":"FH5 (Forza Horizon 5) Car Performance Analyzer with AI",
+        "name_tr":"AI Destekli FH5 (Forza Horizon 5) Araç Performans Analizleri",
+        "url":"https://github.com/ismailoksuz/FH5-Car-Performance-Analyzer-with-AI",
+        "used_languages":["Python"],
+        "tags":["AI","Data","UI"]
+    },
+    "Phone-Compare":{
+        "name_en":"Phone Technical Specs and Comparision Website (13289 devices)",
+        "name_tr":"Telefon Teknik Özellikleri ve Karşılaştırma Sitesi (13.289 cihaz)",
+        "url":"https://github.com/ismailoksuz/Phone-Compare",
+        "used_languages":["Python","HTML","CSS","Javascript"],
+        "tags":["Web","UI","Data"]
+    },
+    "Paid-Autopark-System":{
+        "name_en":"Paid Autopark System with License Plate Recognition",
+        "name_tr":"Plaka Tanıma Sistemli Ücretli Otopark Sistemi",
+        "url":"https://github.com/ismailoksuz/Paid-Autopark-System",
+        "used_languages":["Python"],
+        "tags":["Systems","Computer Vision"]
+    },
+    "Browser-Extensions":{
+        "name_en":"Browser Extensions",
+        "name_tr":"Tarayıcı Uzantıları",
+        "url":"https://github.com/ismailoksuz/Browser-Extensions",
+        "used_languages":["HTML","CSS","Javascript"],
+        "tags":["Web","UI","Tools"]
+    },
+    "QR-Code-Generator-Plus":{
+        "name_en":"Advanced QR Code Generator",
+        "name_tr":"Gelişmiş QR Kod Üretici",
+        "url":"https://github.com/ismailoksuz/QR-Code-Generator-Plus",
+        "used_languages":["Vue","CSS"],
+        "tags":["Web","UI","Tools"]
+    },
+    "Rust-CLI-Utilities":{
+        "name_en":"Rust CLI Utilities",
+        "name_tr":"Rust CLI Araçları",
+        "url":"https://github.com/ismailoksuz/Rust-CLI-Utilities",
+        "used_languages":["Rust"],
+        "tags":["Tools","Systems"]
+    },
+    "HTTP-based-Room-Reservation":{
+        "name_en":"HTTP Based Room Reservation",
+        "name_tr":"HTTP Tabanlı Oda Rezervasyon Sistemi",
+        "url":"https://github.com/ismailoksuz/HTTP-based-Room-Reservation",
+        "used_languages":["Javascript"],
+        "tags":["Systems"]
+    },
+    "iso-browser-games":{
+        "name_en":"Browser Games",
+        "name_tr":"Tarayıcı Oyunları",
+        "url":"https://github.com/ismailoksuz/iso-browser-games",
+        "used_languages":["HTML","CSS","Javascript"],
+        "tags":["Games","Web","UI"]
+    },
+    "Developer-Toolkit":{
+        "name_en":"Developer Toolkit",
+        "name_tr":"Geliştirici Araçları",
+        "url":"https://github.com/ismailoksuz/Developer-Toolkit",
+        "used_languages":["HTML","CSS","Javascript"],
+        "tags":["Tools","Web","UI"]
+    },
+    "Profile-Card":{
+        "name_en":"Profile Card",
+        "name_tr":"Dijital Kartvizit",
+        "url":"https://github.com/ismailoksuz/Profile-Card",
+        "used_languages":["HTML","CSS"],
+        "tags":["Web","UI"]
+    },
+    "ismail-oksuz":{
+        "name_en":"Portfolio Website",
+        "name_tr":"Portfolyo Websitesi",
+        "url":"https://github.com/ismailoksuz/ismail-oksuz",
+        "used_languages":["HTML","CSS","Javascript"],
+        "tags":["Web","UI"]
+    }
+}

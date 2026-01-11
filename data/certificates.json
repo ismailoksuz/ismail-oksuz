@@ -1,0 +1,244 @@
+{
+    "Software Engineer Certificate":{
+        "name_en":"Software Engineer Certificate",
+        "name_tr":"Yazılım Mühendisliği Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["MSSQL","C#","Python"],
+        "category":["Skill","Algorithm","Database"],
+        "url":"https://www.hackerrank.com/certificates/ab5d5c491761",
+        "src_type":"a"
+    },
+    "Software Engineer Intern Certificate":{
+        "name_en":"Software Engineer Intern Certificate",
+        "name_tr":"Yazılım Mühendisliği Stajyerlik Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["MSSQL","C#","Python"],
+        "category":["Skill","Algorithm","Database"],
+        "url":"https://www.hackerrank.com/certificates/a8d9e7211281",
+        "src_type":"a"
+    },
+    "Problem Solving (Intermediate) Certificate":{
+        "name_en":"Problem Solving (Intermediate) Certificate",
+        "name_tr":"Problem Çözme (İleri Düzey) Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["C#","Python"],
+        "category":["Skill","Algorithm"],
+        "url":"https://www.hackerrank.com/certificates/5ca9c4dc075c",
+        "src_type":"a"
+    },
+    "Problem Solving (Basic) Certificate":{
+        "name_en":"Problem Solving (Basic) Certificate",
+        "name_tr":"Problem Çözme (Temel Düzey) Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["C#","Python"],
+        "category":["Skill","Algorithm"],
+        "url":"https://www.hackerrank.com/certificates/0e44b3bb1078",
+        "src_type":"a"
+    },
+    "Python (Basic) Certificate":{
+        "name_en":"Python (Basic) Certificate",
+        "name_tr":"Python (Temel Düzey) Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["Python"],
+        "category":["Skill","Algorithm"],
+        "url":"https://www.hackerrank.com/certificates/1f2e4145994a",
+        "src_type":"a"
+    },
+    "Java (Basic) Certificate":{
+        "name_en":"Java (Basic) Certificate",
+        "name_tr":"Java (Temel Düzey) Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["Java"],
+        "category":["Skill","Algorithm"],
+        "url":"https://www.hackerrank.com/certificates/a6fda4f5bc3c",
+        "src_type":"a"
+    },
+    "CSS (Basic) Certificate":{
+        "name_en":"CSS (Basic) Certificate",
+        "name_tr":"CSS (Temel Düzey) Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["CSS"],
+        "category":["Skill","Web"],
+        "url":"https://www.hackerrank.com/certificates/69bbc79119ee",
+        "src_type":"a"
+    },
+    "SQL (Basic) Certificate":{
+        "name_en":"SQL (Basic) Certificate",
+        "name_tr":"SQL (Temel Düzey) Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["MSSQL"],
+        "category":["Skill","Database"],
+        "url":"https://www.hackerrank.com/certificates/90adf5cdc9b1",
+        "src_type":"a"
+    },
+    "SQL (Advanced) Certificate":{
+        "name_en":"SQL (Advanced) Certificate",
+        "name_tr":"SQL (Orta Düzey) Sertifikası",
+        "company":"Hackerrank",
+        "used_languages":["MSSQL"],
+        "category":["Skill","Database"],
+        "url":"https://www.hackerrank.com/certificates/fbccbf6041d6",
+        "src_type":"a"
+    },
+    "MS Excel - Başlangıç / Orta / İleri":{
+        "name_en":"Microsoft Excel",
+        "name_tr":"Microsoft Excel",
+        "company":"Udemy",
+        "used_languages":["Excel"],
+        "category":["Course","Excel"],
+        "url":"https://www.udemy.com/certificate/UC-b2030bd3-bac3-4a66-a746-10cee6335023/",
+        "src_type":"a"
+    },
+    "SQL Kursu : Sıfırdan Sektörün Yükseklerine":{
+        "name_en":"SQL Course : From Beginner to Advanced",
+        "name_tr":"SQL Kursu : Sıfırdan Sektörün Yükseklerine",
+        "company":"Udemy",
+        "used_languages":["MSSQL"],
+        "category":["Course","Database"],
+        "url":"https://www.udemy.com/certificate/UC-420ba578-ff98-4089-9dd8-8c933f892180/",
+        "src_type":"a"
+    },
+    "Introduction to Databases and SQL Querying":{
+        "name_en":"Introduction to Databases and SQL Querying",
+        "name_tr":"Veri Tabanı ve SQL'e Giriş",
+        "company":"Udemy",
+        "used_languages":["MSSQL"],
+        "category":["Course","Database"],
+        "url":"https://www.udemy.com/certificate/UC-8caade96-994b-46c0-a58d-c922e8cfa544/",
+        "src_type":"a"
+    },
+    "Java Tutorial for Complete Beginners":{
+        "name_en":"Java Tutorial for Complete Beginners",
+        "name_tr":"Temel Düzey Java Eğitimi",
+        "company":"Udemy",
+        "used_languages":["Java"],
+        "category":["Course","Algorithm"],
+        "url":"https://www.udemy.com/certificate/UC-51d73274-45d5-40b2-b551-23a36f1c1466/",
+        "src_type":"a"
+    },
+    "Java":{
+        "name_en":"Java",
+        "name_tr":"Java",
+        "company":"Sololearn",
+        "used_languages":["Java"],
+        "category":["Course","Skill","Algorithm"],
+        "url":"https://www.sololearn.com/certificates/CT-8WMFDQ1J",
+        "src_type":"a"
+    },
+    "SQL":{
+        "name_en":"SQL",
+        "name_tr":"SQL",
+        "company":"Sololearn",
+        "used_languages":["MSSQL"],
+        "category":["Course","Skill","Database"],
+        "url":"https://www.sololearn.com/certificates/CT-NSZKAUXY",
+        "src_type":"a"
+    },
+    "Web Development":{
+        "name_en":"Web Development",
+        "name_tr":"Web Geliştirme",
+        "company":"Sololearn",
+        "used_languages":["HTML","CSS","Javascript"],
+        "category":["Course","Skill","Web"],
+        "url":"https://www.sololearn.com/certificates/CC-6AVFSRKK",
+        "src_type":"a"
+    },
+    "Prompt Engineering":{
+        "name_en":"Prompt Engineering",
+        "name_tr":"Prompt Mühendisliği",
+        "company":"Sololearn",
+        "used_languages":["Prompt"],
+        "category":["Course","Skill","AI"],
+        "url":"https://www.sololearn.com/certificates/CC-GSDWKBPB",
+        "src_type":"a"
+    },
+    "Intro to Programming":{
+        "name_en":"Intro to Programming",
+        "name_tr":"Programlamaya Giriş",
+        "company":"Kaggle",
+        "used_languages":["Python"],
+        "category":["Course","Skill","Algorithm"],
+        "url":"https://www.kaggle.com/learn/certification/ismailoksuz/intro-to-programming",
+        "src_type":"a"
+    },
+    "Python":{
+        "name_en":"Python",
+        "name_tr":"Python",
+        "company":"Kaggle",
+        "used_languages":["Python"],
+        "category":["Course","Skill","Algorithm"],
+        "url":"https://www.kaggle.com/learn/certification/ismailoksuz/python",
+        "src_type":"a"
+    },
+    "Online Zirveler - Endüstri 4.0":{
+        "name_en":"Online Summits - Industry 4.0",
+        "name_tr":"Online Zirveler - Endüstri 4.0",
+        "company":"Öğrenci Kariyeri",
+        "category":["Event"],
+        "url":"src/certif9.jpg",
+        "src_type":"img"
+    },
+    "Online Zirveler - Satış Pazarlama":{
+        "name_en":"Online Summits - Sales and Marketing",
+        "name_tr":"Online Zirveler - Satış Pazarlama",
+        "company":"Öğrenci Kariyeri",
+        "used_languages":[],
+        "category":["Event"],
+        "url":"src/certif10.jpg",
+        "src_type":"img"
+    },
+    "Online Zirveler - Mühendislik":{
+        "name_en":"Online Summits - Engineering",
+        "name_tr":"Online Zirveler - Mühendislik",
+        "company":"Öğrenci Kariyeri",
+        "used_languages":[],
+        "category":["Event"],
+        "url":"src/certif11.jpg",
+        "src_type":"img"
+    },
+    "Online Zirveler - Exclusive":{
+        "name_en":"Online Zirveler - Exclusive",
+        "name_tr":"Online Zirveler - Exclusive",
+        "company":"Öğrenci Kariyeri",
+        "used_languages":[],
+        "category":["Event"],
+        "url":"src/certif12.jpg",
+        "src_type":"img"
+    },
+    "TechTalks - Fintech":{
+        "name_en":"TechTalks - Fintech",
+        "name_tr":"TechTalks - Fintech",
+        "company":"IEEE Computer Society",
+        "used_languages":[],
+        "category":["Event"],
+        "url":"src/certif13.jpg",
+        "src_type":"img"
+    },
+    "StartupTalks - Girişimler Nasıl Yatırım Alıyor?":{
+        "name_en":"StartupTalks - How Do Startups Get Investment?",
+        "name_tr":"StartupTalks - Girişimler Nasıl Yatırım Alıyor?",
+        "company":"IEEE Computer Society",
+        "used_languages":[],
+        "category":["Event"],
+        "url":"src/certif14.jpg",
+        "src_type":"img"
+    },
+    "StartupTalks - Bir Yapay Zeka Girişiminin Hikayesi":{
+        "name_en":"StartupTalks - The Story of an AI Startup",
+        "name_tr":"StartupTalks - Bir Yapay Zeka Girişiminin Hikayesi",
+        "company":"IEEE Computer Society",
+        "used_languages":[],
+        "category":["Event"],
+        "url":"src/certif15.jpg",
+        "src_type":"img"
+    },
+    "Blockchain 101":{
+        "name_en":"Blockchain 101",
+        "name_tr":"Blockchain 101",
+        "company":"IEEE Computer Society",
+        "used_languages":[],
+        "category":["Event","Course"],
+        "url":"src/certif16.png",
+        "src_type":"img"
+    }
+}
