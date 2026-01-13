@@ -116,6 +116,24 @@
         "url":"https://www.udemy.com/certificate/UC-51d73274-45d5-40b2-b551-23a36f1c1466/",
         "src_type":"a"
     },
+    "Introduction to C#":{
+        "name_en":"Introduction to C#",
+        "name_tr":"C#'a Giriş",
+        "company":"Sololearn",
+        "used_languages":["C#"],
+        "category":["Course","Skill","Algorithm"],
+        "url":"https://www.sololearn.com/certificates/CC-GJDLL4TI",
+        "src_type":"a"
+    },
+    "Introduction to Python":{
+        "name_en":"Introduction to Python",
+        "name_tr":"Python'a Giriş",
+        "company":"Sololearn",
+        "used_languages":["Python"],
+        "category":["Course","Skill","Algorithm"],
+        "url":"https://www.sololearn.com/certificates/CC-IKOHWKQ1",
+        "src_type":"a"
+    },
     "Java":{
         "name_en":"Java",
         "name_tr":"Java",
@@ -150,6 +168,60 @@
         "used_languages":["Prompt"],
         "category":["Course","Skill","AI"],
         "url":"https://www.sololearn.com/certificates/CC-GSDWKBPB",
+        "src_type":"a"
+    },
+    "Data Literacy with AI":{
+        "name_en":"Data Literacy with AI",
+        "name_tr":"Yapay Zeka ile Veri Okuryazarlığı",
+        "company":"Sololearn",
+        "used_languages":["Prompt"],
+        "category":["Course","Skill","AI"],
+        "url":"https://www.sololearn.com/certificates/CC-SXSDCNGW",
+        "src_type":"a"
+    },
+    "Write with AI":{
+        "name_en":"Write with AI",
+        "name_tr":"Yapay Zeka Destekli Yazarlık",
+        "company":"Sololearn",
+        "used_languages":["Prompt"],
+        "category":["Course","Skill","AI"],
+        "url":"https://www.sololearn.com/certificates/CC-C80OI6YO",
+        "src_type":"a"
+    },
+    "Ethical AI Foundations":{
+        "name_en":"Ethical AI Foundations",
+        "name_tr":"Etik Yapay Zeka Temelleri",
+        "company":"Sololearn",
+        "used_languages":["Prompt"],
+        "category":["Course","Skill","AI"],
+        "url":"https://www.sololearn.com/certificates/CC-GKYJFZAM",
+        "src_type":"a"
+    },
+    "Visualize Your Data":{
+        "name_en":"Visualize Your Data",
+        "name_tr":"AI ile Veri Görselleştirme",
+        "company":"Sololearn",
+        "used_languages":["Prompt"],
+        "category":["Course","Skill","AI"],
+        "url":"https://www.sololearn.com/certificates/CC-B31GV94R",
+        "src_type":"a"
+    },
+    "Introduction to LLMs":{
+        "name_en":"Introduction to LLMs",
+        "name_tr":"Büyük Dil Modellerine Giriş",
+        "company":"Sololearn",
+        "used_languages":["Prompt"],
+        "category":["Course","Skill","AI"],
+        "url":"https://www.sololearn.com/certificates/CC-XOEQLSSR",
+        "src_type":"a"
+    },
+    "Machine Learning for Beginners":{
+        "name_en":"Machine Learning for Beginners",
+        "name_tr":"Temel Seviye Makine Öğrenmesi",
+        "company":"Sololearn",
+        "used_languages":["Prompt"],
+        "category":["Course","Skill","AI"],
+        "url":"https://www.sololearn.com/certificates/CC-HQOFQ0TF",
         "src_type":"a"
     },
     "Intro to Programming":{
