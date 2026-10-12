@@ -1,237 +1,650 @@
 <!DOCTYPE html>
 <html lang="tr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title data-i18n="pageTitle">ISMAIL OKSUZ</title>
-        <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/46068969?v=4">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="text-gray-800">
-        <button id="menu-button" onclick="toggleDrawer()" class="p-3 bg-accent text-white rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
-            <i class="fas fa-bars text-xl"></i>
-        </button>
-    
-        <button id="lang-toggle" onclick="toggleLanguage()" class="p-3 bg-gray-700 text-white font-bold text-sm rounded-full shadow-lg hover:bg-gray-600 transition duration-300 focus:outline-none focus:ring-4 focus:ring-gray-500">
-            EN
-        </button>
-    
-        <div id="drawer" class="drawer bg-white p-6">
-            <div class="flex justify-between items-center mb-6 border-b pb-3">
-                <h3 class="text-xl font-bold accent-color" data-i18n="menuTitle">Menü</h3>
-                <button onclick="closeDrawer()" class="text-gray-500 hover:text-gray-800 transition">
-                    <i class="fas fa-times text-2xl"></i>
-                </button>
-            </div>
-            <nav class="space-y-3">
-                <a href="#about" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                    <i class="fas fa-user-circle mr-3 w-5"></i> <span data-i18n="linkAbout">Hakkımda</span>
-                </a>
-                <a href="#awards" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                    <i class="fas fa-trophy mr-3 w-5"></i> <span data-i18n="linkAwards">Ödüller</span>
-                </a>
-                <a href="#certificates" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                    <i class="fas fa-certificate mr-3 w-5"></i> <span data-i18n="linkCertificates">Sertifikalar & Eğitimler</span>
-                </a>
-                <a href="#projects" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                    <i class="fas fa-list-check mr-3 w-5"></i> <span data-i18n="linkProjects">Seçili Projeler</span>
-                </a>
-                <a href="#other-projects-section" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                    <i class="fas fa-toolbox mr-3 w-5"></i> <span data-i18n="linkOtherProjects">Diğer Projeler</span>
-                </a>
-                <a href="#live-apps" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                    <i class="fas fa-satellite-dish mr-3 w-5"></i> <span data-i18n="linkLiveApps">Canlı Uygulamalar</span>
-                </a>
-                <a href="#contact" class="menu-link block text-lg font-medium text-gray-700 hover:accent-color hover:translate-x-1 transition duration-200 p-2 rounded-lg">
-                    <i class="fas fa-phone mr-3 w-5"></i> <span data-i18n="linkContact">İletişim</span>
-                </a>
-            </nav>
-        </div>
-    
-        <div id="backdrop" class="backdrop" onclick="closeDrawer()"></div>
-    
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            
-            <header class="text-center py-16 mb-12 bg-white rounded-2xl shadow-xl">
-                <img src="https://avatars.githubusercontent.com/u/46068969?v=4" 
-                    alt="İsmail Öksüz Profil Resmi" 
-                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-[#0077B6] shadow-lg">
-                
-                <h1 class="text-5xl font-extrabold mb-2 tracking-tight">İsmail Öksüz</h1>
-                <p class="text-xl text-gray-600 font-medium" data-i18n="headerSubtitle">Bilgisayar Bilimleri Mühendisi | Prompt Mühendisliği Uzmanı</p>
-                
-                <div class="mt-6 flex justify-center space-x-4">
-                    <a href="#contact" class="px-6 py-2 bg-accent text-white font-semibold rounded-full hover:bg-opacity-90 transition duration-300 shadow-md" data-i18n="buttonContact">
-                        <i class="fas fa-paper-plane mr-2"></i> İletişime Geç
-                    </a>
-                    <a href="https://ismailoksuz.github.io/Profile-Card/" target="_blank" class="px-6 py-2 border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md" data-i18n="buttonCard">
-                        <i class="fas fa-id-card mr-2"></i> Kartvizitim
-                    </a>
-                </div>
-            </header>
-    
-            <section id="about" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
-                <h2 class="text-3xl font-bold accent-color mb-4 border-b-2 border-accent pb-2" data-i18n="sectionAbout">Hakkımda</h2>
-                <p class="text-lg leading-relaxed" data-i18n="aboutText">
-                    Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü'nden Haziran 2023'te mezun oldum. Yazılım geliştirme, yapay zeka ve sistem tasarımı konularında güçlü bir altyapıya sahibim. Özellikle dil modelleri ve otomasyon sistemleri alanındaki yetkinliğimle, **Prompt Mühendisliği (Prompt Engineering)** konusunda yüksek seviyede uzmanlığa sahibim. Hem teknik projeler geliştiren hem de kurumsal çözümlere odaklanan bir mühendisim.
-                </p>
-            </section>
-    
-            <!-- <section class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift border-l-4 border-indigo-500">
-                <div class="flex items-start space-x-4">
-                    <i class="fas fa-rocket text-4xl text-indigo-500 mt-1 flex-shrink-0"></i>
-                    <div>
-                        <h2 class="text-3xl font-bold text-gray-800 mb-2" data-i18n="nexyondTitle">Girişimcilik Projesi: NEXYOND</h2>
-                        <p class="text-gray-600 mb-3" data-i18n="nexyondDesc">
-                            Yazılım, Tasarım ve Yapay Zeka ile geleceği bugünden inşa eden, mobil/web çözümlere odaklanan dijital çözümler girişimi.
-                        </p>
-                        <a href="https://nexyond.vercel.app" target="_blank" class="text-indigo-500 font-semibold hover:underline flex items-center" data-i18n="nexyondLink">
-                            Siteyi İncele <i class="fas fa-external-link-alt text-sm ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </section> -->
-    
-            <section id="awards" class="mb-16 p-8 bg-white rounded-2xl shadow-lg hover-lift">
-                <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2" data-i18n="sectionAwards">Ödüller</h2>
-                
-                <div class="flex items-start space-x-4">
-                    <i class="fas fa-trophy text-4xl accent-color mt-1 flex-shrink-0"></i>
-                    <div>
-                        <h3 class="text-xl font-semibold" data-i18n="awardTitle">En İyi Bitirme Projesi Ödülü</h3>
-                        <p class="text-gray-600" data-i18n="awardInstitution">Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü</p>
-                        <p class="text-sm text-gray-500" data-i18n="awardDate">Haziran 2023</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="certificates" class="mb-16">
-                <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2" data-i18n="sectionCertificates">Sertifikalar ve Eğitimler</h2>
-                
-                <div class="flex flex-wrap gap-2 mb-8">
-                    <button onclick="filterCerts('all')" class="cert-filter-btn active bg-accent text-white py-2 px-4 rounded-lg transition duration-300" data-i18n="filterAll">Hepsi</button>
-                    <button onclick="filterCerts('software')" class="cert-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-lg transition duration-300" data-i18n="filterSoftware">Yazılım & Dil</button>
-                    <button onclick="filterCerts('data')" class="cert-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-lg transition duration-300" data-i18n="filterData">Veritabanı & SQL</button>
-                    <button onclick="filterCerts('ai')" class="cert-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-lg transition duration-300" data-i18n="filterAI">Yapay Zeka & Prompt</button>
-                    <button onclick="filterCerts('participation')" class="cert-filter-btn bg-gray-200 text-gray-700 py-2 px-4 rounded-lg transition duration-300" data-i18n="filterParticipation">Katılım & Zirveler</button>
-                </div>
-            
-                <div id="cert-list" class="space-y-1">
-                    </div>
-            </section>
-            
-            <section id="projects" class="mb-16">
-                <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2" data-i18n="sectionProjects">Seçili Projeler</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    
-                    <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-[#0077B6]">
-                        <div>
-                            <span class="text-sm font-semibold text-white bg-[#0077B6] px-3 py-1 rounded-full mb-3 inline-block" data-i18n="tagAcademic">Akademik</span>
-                            <h3 class="text-xl font-bold mb-2">Soft Error Propagation on Graph Applications</h3>
-                            <p class="text-gray-600 mb-3" data-i18n="projectDesc1">
-                                Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği 2023 En İyi Bitirme Projesi Ödülü'nü kazanan çalışma.
-                            </p>
-                        </div>
-                        <a href="https://cse.eng.marmara.edu.tr/notice/2023-bahar-4-siniflar-veda-toplantisi" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center" data-i18n="projectLink1">
-                            Daha Fazla Bilgi <i class="fas fa-arrow-right text-sm ml-2"></i>
-                        </a>
-                    </div>
-    
-                    <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-gray-500">
-                        <div>
-                            <span class="text-sm font-semibold text-white bg-gray-500 px-3 py-1 rounded-full mb-3 inline-block" data-i18n="tagConference">Konferans Bildirisi</span>
-                            <h3 class="text-xl font-bold mb-2">A New Approach to Twitter Troll Detection</h3>
-                            <p class="text-gray-600 mb-3" data-i18n="projectDesc2">
-                                WRFASE tarafından düzenlenen "International Conference on Computer Science, Machine Learning and Big Data (ICCSMLBD)" konferansına kabul edilen çalışma.
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="p-6 bg-white rounded-2xl shadow-lg hover-lift flex flex-col justify-between border-t-4 border-green-600">
-                        <div>
-                            <span class="text-sm font-semibold text-white bg-green-600 px-3 py-1 rounded-full mb-3 inline-block" data-i18n="tagCorporate">Kurumsal Web Uygulama</span>
-                            <h3 class="text-xl font-bold mb-2" data-i18n="projectTitle3">Uludağ İçecek Kariyer Portalı</h3>
-                            <p class="text-gray-600 mb-3" data-i18n="projectDesc3">
-                                Kurumsal bir proje olarak geliştirilen kariyer portalı uygulaması.
-                            </p>
-                        </div>
-                        <a href="https://kariyer.uludagicecek.com.tr" target="_blank" class="text-accent font-semibold hover:underline mt-4 flex items-center" data-i18n="projectLink3">
-                            Projeye Erişim <i class="fas fa-arrow-right text-sm ml-2"></i>
-                        </a>
-                    </div>
-                    
-                </div>
-    
-            </section>
-            <section id="other-projects-section" class="mb-16">
-                <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2" data-i18n="sectionOtherProjects">Tüm Projeler</h2>
-                <div id="all-projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    </div>
-                <div class="mt-8 text-center">
-                    <p class="text-gray-600 mb-4" data-i18n="githubCta">Diğer tüm projelerime GitHub profilim üzerinden erişebilirsiniz.</p>
-                    <a href="https://github.com/ismailoksuz" target="_blank" class="inline-flex items-center space-x-2 bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-black transition duration-300">
-                        <i class="fab fa-github text-xl"></i>
-                        <span data-i18n="githubLink">GitHub Profilim</span>
-                    </a>
-                </div>
-            </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İsmail Öksüz</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/46068969?v=4">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-900 bg-white loading">
 
-            <section id="live-apps" class="mb-16">
-                <h2 class="text-3xl font-bold accent-color mb-8 border-b-2 border-accent pb-2" data-i18n="sectionLiveApps">Canlı Uygulamalar</h2>
-                <div id="live-projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                </div>
-            </section>
-    
-            <section id="profiles" class="mb-16 p-8 bg-white rounded-2xl shadow-xl border-b-4 border-gray-300">
-                <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2" data-i18n="sectionProfiles">Teknik Profiller</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                        <i class="fab fa-hackerrank text-2xl text-green-600 w-6 text-center"></i>
-                        <a href="https://www.hackerrank.com/profile/ismailoksuz" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">HackerRank</a>
-                    </div>
-                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                        <i class="fab fa-kaggle text-2xl text-blue-600 w-6 text-center"></i>
-                        <a href="https://www.kaggle.com/ismailoksuz" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">Kaggle</a>
-                    </div>
-                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                        <i class="fab fa-github text-2xl text-black w-6 text-center"></i>
-                        <a href="https://github.com/ismailoksuz" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">GitHub</a>
-                    </div>
-                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
-                        <i class="fas fa-code text-2xl text-blue-500 w-6 text-center"></i>
-                        <a href="https://www.sololearn.com/en/profile/12277723" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">Sololearn</a>
-                    </div>
-                </div>
-            </section>
-            
-            <section id="contact" class="mb-16 p-8 bg-white rounded-2xl shadow-xl border-b-4 border-gray-300">
-                <h2 class="text-3xl font-bold accent-color mb-6 border-b-2 border-accent pb-2" data-i18n="sectionContact">İletişim</h2>
-                <p class="text-lg text-gray-600 mb-6" data-i18n="contactText">
-                    Projeler ve iş birliği için aşağıdaki kanallardan ulaşabilirsiniz:
-                </p>
-                <div class="flex flex-col space-y-4">
-                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg border-l-4 border-accent">
-                        <i class="fas fa-envelope text-2xl accent-color w-6 text-center"></i>
-                        <a href="mailto:ismailoeksuez22@gmail.com" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">
-                            ismailoeksuez22@gmail.com
-                        </a>
-                    </div>
-                    <div class="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg border-l-4 border-[#0A66C2]">
-                        <i class="fab fa-linkedin text-2xl text-[#0A66C2] w-6 text-center"></i>
-                        <a href="https://www.linkedin.com/in/ismailoksuz/" target="_blank" class="text-lg font-medium text-gray-700 hover:text-accent transition duration-300">
-                            LinkedIn Profilim
-                        </a>
-                    </div>
-                </div>
-            </section>
-    
-            <footer class="text-center text-gray-500 pt-8 border-t border-gray-300">
-                <p>&copy; 2025 İsmail Öksüz. <span data-i18n="footerText">Tüm hakları saklıdır.</span></p>
-            </footer>
+    <div id="pageLoader">
+        <div class="loader-mono">İÖ</div>
+        <div class="loader-bar"></div>
+        <div class="loader-text">Yükleniyor</div>
+    </div>
+
+    <nav id="nav" class="fixed top-0 left-0 right-0 z-50 theme-light">
+        <div class="w-[95%] max-w-7xl mx-auto flex justify-between items-center py-4">
+            <a href="#top" class="font-semibold text-sm tracking-tight">İsmail Öksüz</a>
+            <div class="hidden md:flex space-x-7 text-xs">
+                <a href="#hakkimda" class="nav-link transition">Hakkımda</a>
+                <a href="#deneyim" class="nav-link transition">Deneyim</a>
+                <a href="#egitim" class="nav-link transition">Eğitim</a>
+                <a href="#oduller" class="nav-link transition">Ödüller</a>
+                <a href="#projeler" class="nav-link transition">Projeler</a>
+                <a href="#sertifikalar" class="nav-link transition">Sertifikalar</a>
+                <a href="#iletisim" class="nav-link transition">İletişim</a>
+            </div>
+            <button id="menuToggle" class="md:hidden text-lg w-8 h-8 flex items-center justify-center" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <script src="script.js"></script>
-    </body>
+        <div id="mobileMenu" class="hidden md:hidden w-[95%] max-w-7xl mx-auto pb-4 text-sm">
+            <a href="#hakkimda" class="block transition">Hakkımda</a>
+            <a href="#deneyim" class="block transition">Deneyim</a>
+            <a href="#egitim" class="block transition">Eğitim</a>
+            <a href="#oduller" class="block transition">Ödüller</a>
+            <a href="#projeler" class="block transition">Projeler</a>
+            <a href="#sertifikalar" class="block transition">Sertifikalar</a>
+            <a href="#iletisim" class="block transition">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="top" class="snap-section px-6" data-theme="light">
+        <div class="w-full max-w-3xl mx-auto text-center">
+            <img src="https://avatars.githubusercontent.com/u/46068969?v=4" alt="İsmail Öksüz"
+                 class="w-28 h-28 rounded-full mx-auto mb-6 object-cover shadow-2xl reveal">
+            <h1 class="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tighter mb-4 reveal reveal-delay-1">İsmail Öksüz</h1>
+            <p class="text-xl sm:text-2xl text-gray-500 font-light mb-8 reveal reveal-delay-2">Bilgisayar Mühendisi</p>
+            <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mb-10 leading-relaxed reveal reveal-delay-3">
+                Yazılım geliştirme, yapay zeka ve sistem tasarımı üzerine çalışıyorum.
+            </p>
+            <div class="flex justify-center gap-4 reveal reveal-delay-3">
+                <a href="#hakkimda" class="px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition">Keşfet</a>
+                <a href="#iletisim" class="px-6 py-3 border border-gray-300 text-sm font-medium rounded-full hover:border-black transition">İletişime Geç</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HAKKIMDA -->
+    <section id="hakkimda" class="snap-section px-6 bg-[#fafafa]" data-theme="light">
+        <div class="w-[95%] max-w-5xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 mb-5 reveal">Hakkımda</p>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-10 max-w-4xl reveal reveal-delay-1">
+                Sistemler ve yapay zeka üzerine düşünen bir mühendis.
+            </h2>
+            <div class="space-y-5 max-w-4xl reveal reveal-delay-2">
+                <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                    Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Mühendisliği Bölümü'nden
+                    Ekim 2023'te mezun oldum. Akademik hayatım boyunca farklı disiplinleri bir araya
+                    getiren projelerde yer aldım ve <strong class="text-black">proje yöneticisi</strong>
+                    olarak ekip koordinasyonu ve süreç yönetimi sorumlulukları üstlendim.
+                    Analitik düşünme ve problem çözme yaklaşımımı, karmaşık ihtiyaçlara
+                    etkili ve sürdürülebilir çözümler geliştirmek için kullanıyorum.
+                </p>
+                <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                    Profesyonel hayatımda yazılım geliştirme ve yapay zekâ alanlarına odaklanıyorum.
+                    Hâlihazırda T.C. Çerkezköy Belediyesi Bilgi İşlem Müdürlüğü'nde
+                    Bilgisayar Mühendisi olarak görev yapıyor, kurum içi süreçleri iyileştiren
+                    <strong class="text-black">yapay zekâ destekli uygulamalar ve LLM tabanlı çözümler</strong>
+                    geliştiriyorum. Teknolojiyi yalnızca bir araç olarak değil, gerçek problemlere
+                    değer katan ve iş süreçlerini ileriye taşıyan bir çözüm alanı olarak görüyorum.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DENEYİM -->
+    <section id="deneyim" class="snap-section px-6 bg-black text-white" data-theme="dark">
+        <div class="w-[95%] max-w-6xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-14 reveal">Deneyim</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+                <div class="reveal reveal-delay-1">
+                    <p class="text-sm text-[#00B4D8] mb-3 font-medium">Nisan 2026 — Devam</p>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 tracking-tight">Bilgisayar Mühendisi</h3>
+                    <p class="text-gray-400 text-sm sm:text-base">T.C. Çerkezköy Belediye Başkanlığı Bilgi İşlem Müdürlüğü</p>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <p class="text-sm text-[#00B4D8] mb-3 font-medium">Eylül 2023 — Şubat 2026</p>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 tracking-tight">Full Stack Yazılım Geliştirici</h3>
+                    <p class="text-gray-400 text-sm sm:text-base">Freelance</p>
+                </div>
+                <div class="reveal reveal-delay-3">
+                    <p class="text-sm text-[#00B4D8] mb-3 font-medium">Temmuz 2022 — Ağustos 2022</p>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 tracking-tight">Full Stack Web Geliştirici Stajyer</h3>
+                    <p class="text-gray-400 text-sm sm:text-base">Uludağ İçecek Türk A.Ş.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EĞİTİM & KULÜPLER -->
+    <section id="egitim" class="snap-section px-6" data-theme="light">
+        <div class="w-[95%] max-w-6xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 mb-5 reveal">Eğitim & Kulüpler</p>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-12 reveal reveal-delay-1">
+                Akademik yolculuk.
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
+                <div class="reveal reveal-delay-1">
+                    <p class="text-sm text-[#0077B6] mb-3 font-medium">Eylül 2019 — Ekim 2023</p>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 tracking-tight">Bilgisayar Mühendisliği</h3>
+                    <p class="text-gray-500">Marmara Üniversitesi Mühendislik Fakültesi</p>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <p class="text-sm text-[#0077B6] mb-3 font-medium">Eylül 2018 — Eylül 2019</p>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 tracking-tight">İngilizce Hazırlık Eğitimi</h3>
+                    <p class="text-gray-500">Abdullah Gül Üniversitesi</p>
+                </div>
+                <div class="reveal reveal-delay-3">
+                    <p class="text-sm text-[#0077B6] mb-3 font-medium">Eylül 2018 — Eylül 2019</p>
+                    <h3 class="text-xl sm:text-2xl font-semibold mb-2 tracking-tight">Yönetim Kurulu Üyesi</h3>
+                    <p class="text-gray-500">AGÜ İletişim Kulübü <span class="text-gray-400">· Gönüllü</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ÖDÜLLER -->
+    <section id="oduller" class="snap-section px-6 bg-black text-white" data-theme="dark">
+        <div class="w-[95%] max-w-5xl mx-auto">
+            <p class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-5 reveal">Ödüller & Başarılar</p>
+            <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight mb-12 reveal reveal-delay-1">
+                Takdir edilen işler.
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="relative reveal reveal-delay-2">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-[#FFD700]/20 via-[#0077B6]/20 to-transparent rounded-3xl blur-2xl"></div>
+                    <div class="relative h-full bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-3xl p-8 backdrop-blur">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#FFD700] to-[#FFA500] flex items-center justify-center text-white text-xl shadow-lg shadow-[#FFD700]/20 mb-6">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <p class="text-xs uppercase tracking-widest text-[#FFD700] mb-2">Haziran 2023</p>
+                        <h3 class="text-xl sm:text-2xl font-bold tracking-tight mb-3">En İyi Bitirme Projesi Ödülü</h3>
+                        <p class="text-gray-400 mb-3 text-sm">Marmara Üniversitesi Mühendislik Fakültesi Bilgisayar Bilimleri Mühendisliği Bölümü</p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            "Soft Error Propagation on Graph Applications" başlıklı bitirme projesiyle
+                            2023 yılı En İyi Bitirme Projesi Ödülü'ne layık görüldüm.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative reveal reveal-delay-3">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-[#00B4D8]/20 via-[#0077B6]/20 to-transparent rounded-3xl blur-2xl"></div>
+                    <div class="relative h-full bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 rounded-3xl p-8 backdrop-blur">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center text-white text-xl shadow-lg shadow-[#00B4D8]/20 mb-6">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <p class="text-xs uppercase tracking-widest text-[#00B4D8] mb-2">2023 · Konferans Bildirisi</p>
+                        <h3 class="text-xl sm:text-2xl font-bold tracking-tight mb-3">ICCSMLBD Konferans Kabulü</h3>
+                        <p class="text-gray-400 mb-3 text-sm">International Conference on Computer Science, Machine Learning and Big Data — WRFASE</p>
+                        <p class="text-gray-500 text-sm leading-relaxed">
+                            "A New Approach to Twitter Troll Detection" başlıklı bildirim,
+                            ICCSMLBD konferansına kabul edildi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJELER — YATAY SHOWCASE (MAVİ) -->
+    <section id="projeler" class="snap-section showcase theme-blue" data-showcase data-theme="dark">
+        <div class="w-full h-full relative">
+            <div class="showcase-track" data-track>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-num">01</div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Kurumsal</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Yapay Zeka</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2026</span>
+                            </div>
+                            <h2 class="chapter-title">On-Premise AI Call Center Assistant</h2>
+                            <p class="chapter-desc">
+                                Çerkezköy Belediyesi için NVIDIA DGX Spark üzerinde çalışan yerel LLM ve STT
+                                tabanlı çağrı merkezi asistanı. Çağrı kayıtlarını analiz eder, vatandaş
+                                taleplerini sınıflandırır ve Bridge360 üzerinde otomatik kayıt oluşturur.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>Yerel LLM</span>
+                                <span>STT</span>
+                                <span>Bridge360</span>
+                                <span>KVKK</span>
+                            </div>
+                            <a href="https://cerkezkoy.bel.tr/proje/yapay-zeka-destekli-cagri-merkezi-asistani" target="_blank" rel="noopener" class="chapter-cta">
+                                Projeye erişim <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-num">02</div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="gold">🏆 Ödüllü</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Akademik</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2023</span>
+                            </div>
+                            <h2 class="chapter-title">Soft Error Propagation on Graph Applications</h2>
+                            <p class="chapter-desc">
+                                Graf algoritmalarında soft error yayılımını inceleyen bitirme projesi.
+                                Marmara Üniversitesi 2023 En İyi Bitirme Projesi Ödülü.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>Graf Algoritmaları</span>
+                                <span>CUDA</span>
+                                <span>NCCL</span>
+                            </div>
+                            <a href="https://cse.eng.marmara.edu.tr/notice/2023-bahar-4-siniflar-veda-toplantisi" target="_blank" rel="noopener" class="chapter-cta">
+                                Daha fazla bilgi <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-num">03</div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Kurumsal</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Web</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2022</span>
+                            </div>
+                            <h2 class="chapter-title">Uludağ İçecek Kariyer Portalı</h2>
+                            <p class="chapter-desc">
+                                Uludağ İçecek Türk A.Ş. için geliştirilen kurumsal kariyer portalı.
+                                Full stack web uygulaması.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>Kurumsal Web</span>
+                                <span>Full Stack</span>
+                            </div>
+                            <a href="https://kariyer.uludagicecek.com.tr" target="_blank" rel="noopener" class="chapter-cta">
+                                Projeye erişim <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-num">04</div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Kurumsal</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Dijital Arşiv</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2026</span>
+                            </div>
+                            <h2 class="chapter-title">Lamatic — Dijital Arşiv Sistemi</h2>
+                            <p class="chapter-desc">
+                                Çerkezköy Belediyesi'nin fiziksel evraktan dijital arşive geçiş sürecini
+                                destekleyen platform. LDAP, OCR, LLM tabanlı semantik arama ve güvenli
+                                dosya paylaşımı.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>LLM</span>
+                                <span>OCR</span>
+                                <span>LDAP</span>
+                                <span>2FA</span>
+                            </div>
+                            <a href="https://lamatic.cerkezkoy.bel.tr" target="_blank" rel="noopener" class="chapter-cta">
+                                Projeye erişim <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-num">05</div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Konferans Bildirisi</span>
+                                <span class="dot">·</span>
+                                <span class="muted">NLP</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2023</span>
+                            </div>
+                            <h2 class="chapter-title">A New Approach to Twitter Troll Detection</h2>
+                            <p class="chapter-desc">
+                                WRFASE ICCSMLBD konferansına kabul edilen çalışma. Sosyal medya troll
+                                tespiti için yeni bir NLP yaklaşımı.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>NLP</span>
+                                <span>Classification</span>
+                                <span>Social Media</span>
+                            </div>
+                            <a href="https://cse.eng.marmara.edu.tr/notice/2023-bahar-4-siniflar-veda-toplantisi" target="_blank" rel="noopener" class="chapter-cta">
+                                Daha fazla bilgi <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-num">06</div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Kurumsal</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Yapay Zeka</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2026</span>
+                            </div>
+                            <h2 class="chapter-title">CERA</h2>
+                            <p class="chapter-desc">
+                                Yerel DGX Spark sunucusunda çalışan, LLM tabanlı WhatsApp yapay zeka
+                                asistanı. Belediye başkanı tarafından aktif kullanılıyor.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>Yerel LLM</span>
+                                <span>WhatsApp API</span>
+                                <span>DGX Spark</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter chapter-final">
+                    <div class="final-inner">
+                        <div class="final-num">→</div>
+                        <h2>Tümüne göz at.</h2>
+                        <p>
+                            Kurumsal, akademik, freelance ve kişisel — toplam 33 projeyi
+                            tam arşivden keşfet.
+                        </p>
+                        <a href="projeler.html" class="final-link">
+                            Tüm Projeler <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="showcase-ui">
+                <div class="showcase-count">
+                    <span data-current>01</span>
+                    <span class="slash">/</span>
+                    <span data-total>06</span>
+                </div>
+                <div class="showcase-progress">
+                    <div class="showcase-progress-fill" data-progress></div>
+                </div>
+                <div class="showcase-nav">
+                    <button data-prev aria-label="Önceki"><i class="fas fa-arrow-left"></i></button>
+                    <button data-next aria-label="Sonraki"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERTİFİKALAR — YATAY SHOWCASE (MOR) -->
+    <section id="sertifikalar" class="snap-section showcase theme-purple" data-showcase data-theme="dark">
+        <div class="w-full h-full relative">
+            <div class="showcase-track" data-track>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-icon"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Turkcell</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Geleceği Yazanlar</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2026</span>
+                            </div>
+                            <h2 class="chapter-title">Doğal Dil İşleme (NLP)</h2>
+                            <p class="chapter-desc">
+                                Turkcell Geleceği Yazanlar platformu üzerinden alınan NLP sertifikası.
+                                Metin işleme, tokenizasyon, duygu analizi ve dil modelleri üzerine
+                                uygulamalı çalışma.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>NLP</span>
+                                <span>Python</span>
+                                <span>LLM</span>
+                            </div>
+                            <a href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/f8a155115dc84265aa68b76241bf3a4b" target="_blank" rel="noopener" class="chapter-cta">
+                                Sertifikayı incele <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-icon"><i class="fas fa-diagram-project"></i></div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Turkcell</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Veri Bilimi</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2026</span>
+                            </div>
+                            <h2 class="chapter-title">CRISP-DM — Veri Madenciliği Süreci</h2>
+                            <p class="chapter-desc">
+                                Endüstri standardı veri madenciliği metodolojisi CRISP-DM üzerine
+                                Turkcell Geleceği Yazanlar sertifikası. Veri anlama, hazırlama,
+                                modelleme ve değerlendirme aşamaları.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>CRISP-DM</span>
+                                <span>Veri Bilimi</span>
+                            </div>
+                            <a href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/cf3b35de521c47ce996ce56cc642824f" target="_blank" rel="noopener" class="chapter-cta">
+                                Sertifikayı incele <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-icon"><i class="fab fa-hackerrank"></i></div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">HackerRank</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Skill Certification</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2025</span>
+                            </div>
+                            <h2 class="chapter-title">Software Engineer Certificate</h2>
+                            <p class="chapter-desc">
+                                HackerRank'in ileri düzey yazılım mühendisliği sınavı. MSSQL, C# ve
+                                Python üzerinden problem çözme, algoritma ve veritabanı yetkinliği
+                                test edildi.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>MSSQL</span>
+                                <span>C#</span>
+                                <span>Python</span>
+                            </div>
+                            <a href="https://www.hackerrank.com/certificates/ab5d5c491761" target="_blank" rel="noopener" class="chapter-cta">
+                                Sertifikayı incele <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter">
+                    <div class="chapter-inner">
+                        <div class="chapter-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                        <div>
+                            <div class="chapter-meta">
+                                <span class="accent">Turkcell</span>
+                                <span class="dot">·</span>
+                                <span class="muted">Yapay Zeka</span>
+                                <span class="dot">·</span>
+                                <span class="muted">2026</span>
+                            </div>
+                            <h2 class="chapter-title">Prompt Mühendisliği</h2>
+                            <p class="chapter-desc">
+                                Büyük dil modelleriyle etkili iletişim, prompt tasarımı ve yapay
+                                zeka çıktılarını optimize etme üzerine Turkcell Geleceği Yazanlar
+                                sertifikası.
+                            </p>
+                            <div class="chapter-tags">
+                                <span>LLM</span>
+                                <span>Prompt</span>
+                                <span>AI</span>
+                            </div>
+                            <a href="https://gelecegiyazanlar.turkcell.com.tr/sertifika/4a0e461e1b8b4592a259fd5b5adcdc08" target="_blank" rel="noopener" class="chapter-cta">
+                                Sertifikayı incele <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chapter chapter-final">
+                    <div class="final-inner">
+                        <div class="final-num">→</div>
+                        <h2>Tüm sertifikalar.</h2>
+                        <p>
+                            Farklı platformlardan aldığım 43 eğitim, sınav ve etkinlik
+                            belgesi — hepsi tam arşivde.
+                        </p>
+                        <a href="sertifikalar.html" class="final-link">
+                            Tüm Sertifikalar <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="showcase-ui">
+                <div class="showcase-count">
+                    <span data-current>01</span>
+                    <span class="slash">/</span>
+                    <span data-total>04</span>
+                </div>
+                <div class="showcase-progress">
+                    <div class="showcase-progress-fill" data-progress></div>
+                </div>
+                <div class="showcase-nav">
+                    <button data-prev aria-label="Önceki"><i class="fas fa-arrow-left"></i></button>
+                    <button data-next aria-label="Sonraki"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM & TEKNİK PROFİLLER -->
+    <section id="iletisim" class="snap-section px-6 bg-black text-white" data-theme="dark">
+        <div class="w-[95%] max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+                <div class="reveal">
+                    <p class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-5">İletişim</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-8">Bana ulaş.</h2>
+                    <div class="space-y-4">
+                        <a href="mailto:ismail.oksuz@cerkezkoy.bel.tr" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fas fa-envelope text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">E-posta</p>
+                                <p class="text-sm">ismail.oksuz@cerkezkoy.bel.tr</p>
+                            </div>
+                        </a>
+                        <a href="tel:+905382342550" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fas fa-phone text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">Telefon</p>
+                                <p class="text-sm">+90 (538) 234 25 50</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center gap-4 text-gray-300">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0">
+                                <i class="fas fa-map-marker-alt text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">Adres</p>
+                                <p class="text-sm">59500, Çerkezköy, Tekirdağ</p>
+                            </div>
+                        </div>
+                        <a href="https://ismailoksuz.github.io/Profile-Card" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fas fa-id-card text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">Dijital Kartvizit</p>
+                                <p class="text-sm">Profile-Card</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ismailoksuz/" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fab fa-linkedin text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">LinkedIn</p>
+                                <p class="text-sm">/in/ismailoksuz</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <p class="text-xs uppercase tracking-[0.3em] text-gray-500 mb-5">Teknik Profiller</p>
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-8">Kod izlerim.</h2>
+                    <div class="space-y-4">
+                        <a href="https://github.com/ismailoksuz" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fab fa-github text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">GitHub</p>
+                                <p class="text-sm">/ismailoksuz</p>
+                            </div>
+                        </a>
+                        <a href="https://www.hackerrank.com/profile/ismailoksuz" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fab fa-hackerrank text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">HackerRank</p>
+                                <p class="text-sm">/profile/ismailoksuz</p>
+                            </div>
+                        </a>
+                        <a href="https://www.kaggle.com/ismailoksuz" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fab fa-kaggle text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">Kaggle</p>
+                                <p class="text-sm">/ismailoksuz</p>
+                            </div>
+                        </a>
+                        <a href="https://www.sololearn.com/en/profile/12277723" target="_blank" class="flex items-center gap-4 text-gray-300 hover:text-[#00B4D8] transition group">
+                            <span class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#00B4D8]/50 transition shrink-0">
+                                <i class="fas fa-code text-sm"></i>
+                            </span>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-gray-500">Sololearn</p>
+                                <p class="text-sm">/profile/12277723</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-gray-600 mt-16 text-center reveal reveal-delay-2">© 2025 İsmail Öksüz. Tüm hakları saklıdır.</p>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
 </html>

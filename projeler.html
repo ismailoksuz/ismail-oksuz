@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler · İsmail Öksüz</title>
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/46068969?v=4">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-900 bg-white loading">
+
+    <div id="pageLoader">
+        <div class="loader-mono">İÖ</div>
+        <div class="loader-bar"></div>
+        <div class="loader-text">Yükleniyor</div>
+    </div>
+
+    <nav id="nav" class="fixed top-0 left-0 right-0 z-50 theme-light">
+        <div class="w-[95%] max-w-7xl mx-auto flex justify-between items-center py-4">
+            <a href="index.html" class="font-semibold text-sm tracking-tight">İsmail Öksüz</a>
+            <div class="hidden md:flex space-x-7 text-xs">
+                <a href="index.html#hakkimda" class="nav-link transition">Hakkımda</a>
+                <a href="index.html#deneyim" class="nav-link transition">Deneyim</a>
+                <a href="index.html#egitim" class="nav-link transition">Eğitim</a>
+                <a href="index.html#oduller" class="nav-link transition">Ödüller</a>
+                <a href="projeler.html" class="nav-link transition">Projeler</a>
+                <a href="sertifikalar.html" class="nav-link transition">Sertifikalar</a>
+                <a href="index.html#iletisim" class="nav-link transition">İletişim</a>
+            </div>
+            <button id="menuToggle" class="md:hidden text-lg w-8 h-8 flex items-center justify-center" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden w-[95%] max-w-7xl mx-auto pb-4 text-sm">
+            <a href="index.html#hakkimda" class="block transition">Hakkımda</a>
+            <a href="index.html#deneyim" class="block transition">Deneyim</a>
+            <a href="index.html#egitim" class="block transition">Eğitim</a>
+            <a href="index.html#oduller" class="block transition">Ödüller</a>
+            <a href="projeler.html" class="block transition font-semibold">Projeler</a>
+            <a href="sertifikalar.html" class="block transition">Sertifikalar</a>
+            <a href="index.html#iletisim" class="block transition">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="top" class="snap-section px-6" data-theme="light">
+        <div class="w-full max-w-3xl mx-auto text-center">
+            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6 reveal">Projeler</p>
+            <h1 class="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tighter mb-6 reveal reveal-delay-1">Tüm projeler.</h1>
+            <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mb-10 leading-relaxed reveal reveal-delay-2">
+                Kurumsal, akademik, freelance ve kişisel işler — <span id="totalCount" class="font-semibold text-black">0</span> adet.
+            </p>
+            <div class="flex justify-center gap-4 reveal reveal-delay-3">
+                <a href="https://github.com/ismailoksuz" target="_blank" rel="noopener"
+                   class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition">
+                    <i class="fab fa-github text-base"></i>
+                    <span>GitHub Profilim</span>
+                </a>
+                <a href="#arsiv"
+                   class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-sm font-medium rounded-full hover:border-black transition">
+                    <span>Arşive İn</span>
+                    <i class="fas fa-arrow-down text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LİSTE -->
+    <section id="arsiv" class="snap-section px-6 bg-[#fafafa]" data-theme="light" style="height: auto; min-height: 100dvh; overflow: visible; padding-top: 6rem; padding-bottom: 6rem; display: block;">
+        <div class="w-[95%] max-w-5xl mx-auto">
+            <div id="projList" class="border-t border-gray-200"></div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 lg:px-10 border-t border-gray-200 bg-[#fafafa]">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+            <p>© 2026 İsmail Öksüz. Tüm hakları saklıdır.</p>
+            <div class="flex items-center gap-6">
+                <a href="https://github.com/ismailoksuz" target="_blank" rel="noopener" class="hover:text-black transition">
+                    <i class="fab fa-github mr-1.5"></i>GitHub
+                </a>
+                <a href="index.html" class="hover:text-black transition">← Ana Sayfa</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // starred: true → öne çıkanlar (en üstte ★ ile)
+        const projects = [
+            // ===== ÖNE ÇIKANLAR =====
+            { name:"On-Premise AI Call Center Assistant", desc:"Çerkezköy Belediyesi için yerel LLM ve STT tabanlı çağrı merkezi asistanı. Bridge360 entegrasyonu ile otomatik talep kaydı.", url:"https://cerkezkoy.bel.tr/proje/yapay-zeka-destekli-cagri-merkezi-asistani", tags:["Yerel LLM","STT","Bridge360"], starred:true },
+            { name:"Soft Error Propagation on Graph Applications", desc:"Graf algoritmalarında soft error yayılımı analizi. Marmara Üniversitesi 2023 En İyi Bitirme Projesi Ödülü.", url:"https://cse.eng.marmara.edu.tr/notice/2023-bahar-4-siniflar-veda-toplantisi", tags:["CUDA","NCCL","Graf Algoritmaları"], starred:true },
+            { name:"Uludağ İçecek Kariyer Portalı", desc:"Uludağ İçecek Türk A.Ş. için geliştirilen kurumsal kariyer portalı. Full stack web uygulaması.", url:"https://kariyer.uludagicecek.com.tr", tags:["Kurumsal Web","Full Stack"], starred:true },
+            { name:"Lamatic — Dijital Arşiv Sistemi", desc:"Çerkezköy Belediyesi için yapay zeka destekli dijital arşiv platformu. LDAP, OCR, LLM tabanlı semantik arama.", url:"https://lamatic.cerkezkoy.bel.tr", tags:["LLM","OCR","LDAP","2FA"], starred:true },
+            { name:"A New Approach to Twitter Troll Detection", desc:"WRFASE ICCSMLBD konferansına kabul edilen NLP çalışması. Sosyal medya troll tespiti için yeni yaklaşım.", url:"https://cse.eng.marmara.edu.tr/notice/2023-bahar-4-siniflar-veda-toplantisi", tags:["NLP","Classification"], starred:true },
+            { name:"CERA", desc:"Yerel DGX Spark sunucusunda çalışan, LLM tabanlı WhatsApp yapay zeka asistanı. Belediye başkanı tarafından aktif kullanılıyor.", url:"", tags:["Yerel LLM","WhatsApp API","DGX Spark"], starred:true },
+
+            // ===== DİĞER PROJELER =====
+            { name:"Multi-Agent Browser Orchestrator", desc:"Tarayıcı otomasyonu için çoklu ajan orkestrasyon sistemi.", url:"https://github.com/ismailoksuz/multi-agent-browser-orchestrator", tags:["JavaScript","AI","Automation"] },
+            { name:"Hand Tracking", desc:"Gerçek zamanlı el takibi ile işaretçi kontrolü.", url:"https://github.com/ismailoksuz/hand-tracking", tags:["Python","CV"] },
+            { name:"Webcam Hand Cursor", desc:"Web kamerası üzerinden el hareketiyle imleç kontrolü.", url:"https://github.com/ismailoksuz/webcam-hand-cursor", tags:["Python","CV"] },
+            { name:"World Cup 2026 Card Collection", desc:"2026 Dünya Kupası dijital kart koleksiyonu simülatörü.", url:"https://github.com/ismailoksuz/World-Cup-2026-Card-Collection", tags:["JavaScript","Football"] },
+            { name:"Browser Extensions", desc:"Gizlilik ve güvenlik odaklı tarayıcı uzantıları koleksiyonu.", url:"https://github.com/ismailoksuz/Browser-Extensions", tags:["JavaScript","Extensions"] },
+            { name:"Paid Autopark System", desc:"Plaka tanıma ve QR tabanlı otomatik otopark yönetim sistemi.", url:"https://github.com/ismailoksuz/Paid-Autopark-System", tags:["Python","CV"] },
+            { name:"Global Urban Rail Transit Data UI", desc:"Dünya çapında kentsel raylı sistemleri görselleştiren interaktif web paneli.", url:"https://github.com/ismailoksuz/Global-Urban-Rail-Transit-Data-UI", tags:["JavaScript","Data"] },
+            { name:"AI-Powered Workflow Automation", desc:"Ollama tabanlı yerel LLM ile CLI görev otomasyon sistemi.", url:"https://github.com/ismailoksuz/AI-Powered-Workflow-Automation-System", tags:["Shell","Ollama"] },
+            { name:"Comprehensive Shell Scripts (Mac)", desc:"macOS için 41 production-ready shell script koleksiyonu.", url:"https://github.com/ismailoksuz/Comprehensive-Shell-Scripts-Mac", tags:["Shell","macOS"] },
+            { name:"NBA AI Predictive Modeling", desc:"NBA maç sonuçlarını ve skorları tahmin eden ML modeli.", url:"https://github.com/ismailoksuz/NBA-AI-Predictive-Modeling", tags:["Python","ML"] },
+            { name:"FH5 Car Performance Analyzer", desc:"Forza Horizon 5 araç performansını analiz eden ML platformu.", url:"https://github.com/ismailoksuz/FH5-Car-Performance-Analyzer-with-AI", tags:["Python","ML"] },
+            { name:"EA FC26 Data Hub", desc:"FC 26 oyuncu verisi için Streamlit dashboard'u.", url:"https://github.com/ismailoksuz/EAFC26-DataHub", tags:["Python","Streamlit"] },
+            { name:"Formula1 Data Analysis Hub", desc:"1950-2025 F1 verilerini analiz eden ve DNF riski tahmin eden platform.", url:"https://github.com/ismailoksuz/Formula1-Data-Analysis-Hub", tags:["Python","Data"] },
+            { name:"Preset-Launcher", desc:"C# ile yazılmış preset başlatıcı uygulaması.", url:"https://github.com/ismailoksuz/Preset-Launcher", tags:["C#","Desktop"] },
+            { name:"Phone Compare", desc:"13.289 cihazın teknik özelliklerini karşılaştıran web sitesi.", url:"https://github.com/ismailoksuz/Web-Projects/tree/main/Phone-Compare", tags:["JavaScript","Data"] },
+            { name:"Real-Time Crypto Dashboard", desc:"Canlı kripto para fiyatlarını gösteren dashboard.", url:"https://github.com/ismailoksuz/Web-Projects/tree/main/Real-Time-Crypto-Dashboard", tags:["TypeScript","Web"] },
+            { name:"Türkiye Road Explorer", desc:"Türkiye karayollarını keşfetmek için interaktif harita uygulaması.", url:"https://github.com/ismailoksuz/Web-Projects/tree/main/Türkiye-Road-Explorer", tags:["JavaScript","Maps"] },
+            { name:"FIFA World Cup 2026 Simulator", desc:"2026 Dünya Kupası grup ve eleme simülatörü.", url:"https://github.com/ismailoksuz/Web-Projects/tree/main/FIFA-World-Cup-2026-Simulator", tags:["JavaScript","Sports"] },
+            { name:"UEFA Tournaments", desc:"UEFA turnuvaları için fikstür ve sonuç takip aracı.", url:"https://github.com/ismailoksuz/Web-Projects/tree/main/UEFA-Tournaments", tags:["JavaScript","Sports"] },
+            { name:"Developer Toolkit", desc:"Geliştiriciler için pratik web araçları koleksiyonu.", url:"https://github.com/ismailoksuz/Web-Projects/tree/main/Developer-Toolkit", tags:["JavaScript","Tools"] },
+            { name:"QR Code Generator Plus", desc:"Gelişmiş QR kod üretici (Vue).", url:"https://github.com/ismailoksuz/Web-Projects/tree/main/QR-Code-Generator-Plus", tags:["Vue","Tools"] },
+            { name:"Hackerrank Solutions", desc:"Çeşitli HackerRank problemlerinin C# çözümleri.", url:"https://github.com/ismailoksuz/Hackerrank-Solutions", tags:["C#","Algorithm"] },
+            { name:"Marmara CSE", desc:"Marmara Üniversitesi Bilgisayar Mühendisliği ödev koleksiyonu.", url:"https://github.com/ismailoksuz/Marmara-CSE", tags:["Java","University"] },
+            { name:"Student Registration System", desc:"Java ve Python ile geliştirilmiş öğrenci kayıt sistemi (CSE3063).", url:"https://github.com/ismailoksuz/CSE3063F22P1_GRP6", tags:["Java","Python"] },
+            { name:"Object Detection for Vehicles", desc:"Araç tipi tespit sistemi (Computer Vision).", url:"https://github.com/ismailoksuz/Object-Detection-System-for-Vehicles", tags:["Python","CV"] },
+            { name:"HTTP-based Room Reservation", desc:"HTTP tabanlı oda rezervasyon sistemi (CSE4074).", url:"https://github.com/ismailoksuz/HTTP-based-Room-Reservation", tags:["JavaScript","Web"] },
+            { name:"World Cup 2022 Predictor", desc:"2022 Dünya Kupası için konsol tabanlı Python tahmin uygulaması.", url:"https://github.com/ismailoksuz/World-Cup-2022-Predictor", tags:["Python","Sports"] },
+        ];
+
+        const list = document.getElementById('projList');
+        const totalCount = document.getElementById('totalCount');
+        totalCount.textContent = projects.length;
+
+        function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+
+        function renderRow(p) {
+            const tagsHtml = p.tags.slice(0, 3).map(t =>
+                `<span class="text-[10px] uppercase tracking-wider text-gray-500 bg-gray-100 rounded-full px-2 py-0.5">${esc(t)}</span>`
+            ).join('');
+
+            const linkHtml = p.url
+                ? `<span class="shrink-0 ml-4 text-gray-300 group-hover:text-[#0077B6] transition">
+                       <i class="fas fa-arrow-up-right-from-square text-sm"></i>
+                   </span>`
+                : `<span class="shrink-0 ml-4 text-gray-300"><i class="fas fa-lock text-xs"></i></span>`;
+
+            const wrapper = p.url ? 'a' : 'div';
+            const hrefAttr = p.url ? `href="${esc(p.url)}" target="_blank" rel="noopener"` : '';
+
+            const star = p.starred
+                ? `<span class="shrink-0 text-[#0077B6] mr-3" title="Öne çıkan"><i class="fas fa-star text-xs"></i></span>`
+                : '';
+
+            return `
+                <${wrapper} ${hrefAttr}
+                   class="proj-row group flex items-center justify-between gap-4 py-5 border-b border-gray-200 ${p.url ? 'cursor-pointer' : 'cursor-default'}">
+                    <div class="flex items-start min-w-0 flex-1">
+                        ${star}
+                        <div class="min-w-0 flex-1">
+                            <h3 class="text-base font-semibold text-gray-900 leading-snug ${p.url ? 'group-hover:text-[#0077B6] transition' : ''} mb-1">
+                                ${esc(p.name)}
+                            </h3>
+                            <p class="text-sm text-gray-500 leading-relaxed line-clamp-2 mb-2">
+                                ${esc(p.desc)}
+                            </p>
+                            <div class="flex flex-wrap gap-1.5">
+                                ${tagsHtml}
+                            </div>
+                        </div>
+                    </div>
+                    ${linkHtml}
+                </${wrapper}>
+            `;
+        }
+
+        list.innerHTML = projects.map(renderRow).join('');
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>
