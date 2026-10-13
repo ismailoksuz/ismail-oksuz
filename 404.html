@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 — Sayfa Bulunamadı | İsmail Öksüz</title>
+    <meta name="description" content="Aradığınız sayfa bulunamadı. İsmail Öksüz'ün portfolyosuna dönmek için ana sayfayı ziyaret edin.">
+    <meta name="robots" content="noindex, follow">
+    <meta name="author" content="İsmail Öksüz">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="404 — Sayfa Bulunamadı">
+    <meta property="og:description" content="Aradığınız sayfa bulunamadı.">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/46068969?v=4">
+    <meta property="og:url" content="https://ismailoksuz.github.io/ismail-oksuz/404.html">
+    <meta property="og:locale" content="tr_TR">
+
+    <meta name="theme-color" content="#0077B6">
+
+    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/46068969?v=4">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-900 bg-white loading">
+
+    <div id="pageLoader">
+        <div class="loader-mono">İÖ</div>
+        <div class="loader-bar"></div>
+        <div class="loader-text">Yükleniyor</div>
+    </div>
+
+    <nav id="nav" class="fixed top-0 left-0 right-0 z-50 theme-light">
+        <div class="w-[95%] max-w-7xl mx-auto flex justify-between items-center py-4">
+            <a href="index.html" class="font-semibold text-sm tracking-tight">İsmail Öksüz</a>
+            <div class="hidden md:flex space-x-7 text-xs">
+                <a href="index.html#hakkimda" class="nav-link transition">Hakkımda</a>
+                <a href="index.html#deneyim" class="nav-link transition">Deneyim</a>
+                <a href="index.html#egitim" class="nav-link transition">Eğitim</a>
+                <a href="index.html#oduller" class="nav-link transition">Ödüller</a>
+                <a href="projeler.html" class="nav-link transition">Projeler</a>
+                <a href="sertifikalar.html" class="nav-link transition">Sertifikalar</a>
+                <a href="index.html#iletisim" class="nav-link transition">İletişim</a>
+            </div>
+            <button id="menuToggle" class="md:hidden text-lg w-8 h-8 flex items-center justify-center" aria-label="Menü">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden w-[95%] max-w-7xl mx-auto pb-4 text-sm">
+            <a href="index.html#hakkimda" class="block transition">Hakkımda</a>
+            <a href="index.html#deneyim" class="block transition">Deneyim</a>
+            <a href="index.html#egitim" class="block transition">Eğitim</a>
+            <a href="index.html#oduller" class="block transition">Ödüller</a>
+            <a href="projeler.html" class="block transition">Projeler</a>
+            <a href="sertifikalar.html" class="block transition">Sertifikalar</a>
+            <a href="index.html#iletisim" class="block transition">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- 404 HERO -->
+    <section id="top" class="snap-section px-6" data-theme="light">
+        <div class="w-full max-w-3xl mx-auto text-center">
+            <p class="text-xs uppercase tracking-[0.3em] text-gray-400 mb-6 reveal">Hata</p>
+
+            <h1 class="text-[7rem] sm:text-[10rem] md:text-[12rem] font-bold tracking-tighter leading-none mb-6 reveal reveal-delay-1">
+                404
+            </h1>
+
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-6 reveal reveal-delay-2">
+                Bu sayfa bulunamadı.
+            </h2>
+
+            <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto mb-10 leading-relaxed reveal reveal-delay-2">
+                Aradığın sayfa taşınmış, silinmiş ya da hiç var olmamış olabilir.
+                Aşağıdaki bağlantılardan devam edebilirsin.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 reveal reveal-delay-3">
+                <a href="index.html"
+                   class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white text-sm font-medium rounded-full hover:bg-gray-800 transition">
+                    <i class="fas fa-arrow-left text-xs"></i>
+                    <span>Ana Sayfa</span>
+                </a>
+                <a href="projeler.html"
+                   class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-sm font-medium rounded-full hover:border-black transition">
+                    <span>Projeler</span>
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+                <a href="sertifikalar.html"
+                   class="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 text-sm font-medium rounded-full hover:border-black transition">
+                    <span>Sertifikalar</span>
+                    <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

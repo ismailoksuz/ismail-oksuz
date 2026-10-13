@@ -1,7 +1,13 @@
+/* ============================================================
+   İSMAİL ÖKSÜZ — ORTAK SCRIPT
+   ============================================================ */
+
+/* ===== YÜKLEME EKRANI ===== */
 (function () {
     const loader = document.getElementById('pageLoader');
     if (!loader) return;
     let closed = false, minTimePassed = false, resourcesReady = false;
+
     function tryHide() {
         if (closed || !minTimePassed || !resourcesReady) return;
         closed = true;
@@ -17,10 +23,12 @@
     setTimeout(() => { minTimePassed = true; resourcesReady = true; tryHide(); }, 4500);
 })();
 
+/* ===== DİNAMİK HEADER ===== */
 (function () {
     const nav = document.getElementById('nav');
     if (!nav) return;
     const sections = document.querySelectorAll('.snap-section');
+
     function updateNavTheme() {
         const probeY = window.scrollY + window.innerHeight * 0.5;
         let theme = 'light';
@@ -39,6 +47,7 @@
     updateNavTheme();
 })();
 
+/* ===== REVEAL ===== */
 (function () {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -52,6 +61,7 @@
     document.querySelectorAll('.snap-section').forEach(s => observer.observe(s));
 })();
 
+/* ===== MOBİL MENÜ ===== */
 (function () {
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -72,9 +82,11 @@
     });
 })();
 
+/* ===== SHOWCASE (YATAY NAVİGASYON) — çoklu ===== */
 (function () {
     const showcases = document.querySelectorAll('[data-showcase]');
     if (!showcases.length) return;
+
     function setupShowcase(showcase) {
         const track = showcase.querySelector('[data-track]');
         if (!track) return;
@@ -85,12 +97,16 @@
         const progressFill = showcase.querySelector('[data-progress]');
         const prevBtn = showcase.querySelector('[data-prev]');
         const nextBtn = showcase.querySelector('[data-next]');
+
         const total = allChapters.length;
         const projectTotal = projectChapters.length;
+
         let idx = 0;
         let isActive = false;
         let locked = false;
+
         if (totalNum) totalNum.textContent = String(projectTotal).padStart(2, '0');
+
         function update() {
             if (window.matchMedia('(max-width: 767px)').matches) return;
             if (idx === 0 || idx === total - 1) {
@@ -108,37 +124,49 @@
             if (prevBtn) prevBtn.disabled = idx === 0;
             if (nextBtn) nextBtn.disabled = idx === total - 1;
         }
+
         function goTo(i) {
             idx = Math.max(0, Math.min(total - 1, i));
             update();
         }
+
         if (prevBtn) prevBtn.addEventListener('click', () => goTo(idx - 1));
         if (nextBtn) nextBtn.addEventListener('click', () => goTo(idx + 1));
+
+                // Showcase içindeyken dikey snap'i kapat, çıkışta geri aç
         function setSnapLock(locked) {
             document.documentElement.style.scrollSnapType = locked ? 'none' : '';
         }
+
         showcase.addEventListener('wheel', (e) => {
             if (window.matchMedia('(max-width: 767px)').matches) return;
             if (!isActive) return;
             const goingDown = e.deltaY > 0;
             const goingUp = e.deltaY < 0;
+
+            // İlk ve son chapter'da serbest bırak — dikey snap devralsın
             if (goingDown && idx === total - 1) { setSnapLock(false); return; }
             if (goingUp && idx === 0) { setSnapLock(false); return; }
+
+            // Aksi halde yatay kaydır, dikey snap'i tamamen bloke et
             e.preventDefault();
             e.stopImmediatePropagation();
             setSnapLock(true);
+
             if (locked) return;
             locked = true;
             setTimeout(() => locked = false, 700);
             if (goingDown) goTo(idx + 1);
             else goTo(idx - 1);
         }, { passive: false, capture: true });
+
         document.addEventListener('keydown', (e) => {
             if (window.matchMedia('(max-width: 767px)').matches) return;
             if (!isActive) return;
             if (e.key === 'ArrowRight') { e.preventDefault(); goTo(idx + 1); }
             if (e.key === 'ArrowLeft')  { e.preventDefault(); goTo(idx - 1); }
         });
+
         let tx = 0, ty = 0;
         showcase.addEventListener('touchstart', (e) => {
             if (window.matchMedia('(max-width: 767px)').matches) return;
@@ -154,6 +182,7 @@
                 else goTo(idx - 1);
             }
         }, { passive: true });
+
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(en => {
                 isActive = en.isIntersecting && en.intersectionRatio > 0.5;
@@ -168,13 +197,82 @@
             });
         }, { threshold: 0 });
         exitObs.observe(showcase);
+
         update();
     }
+
     showcases.forEach(setupShowcase);
 })();
 
+/* ===== PDF ÖNİZLEMELERİ ===== */
 (function () {
-    document.querySelectorAll('img').forEach(el => {
+    if (typeof pdfjsLib === 'undefined') return;
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    function renderPdfCanvas(canvas) {
+        const url = canvas.dataset.pdf;
+        pdfjsLib.getDocument(url).promise
+            .then(pdf => pdf.getPage(1))
+            .then(page => {
+                const container = canvas.parentElement;
+                const cw = container.clientWidth;
+                const ch = container.clientHeight;
+                if (cw === 0 || ch === 0) return;
+
+                const base = page.getViewport({ scale: 1 });
+                const scale = Math.max(cw / base.width, ch / base.height);
+                const viewport = page.getViewport({ scale });
+                canvas.width = cw;
+                canvas.height = ch;
+                canvas.style.width = '100%';
+                canvas.style.height = '100%';
+
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#ffffff';
+                ctx.fillRect(0, 0, cw, ch);
+                ctx.translate((cw - viewport.width) / 2, (ch - viewport.height) / 2);
+                return page.render({ canvasContext: ctx, viewport }).promise;
+            })
+            .then(() => {
+                const spinner = canvas.parentElement.querySelector('.media-spinner');
+                if (spinner) spinner.classList.add('is-hidden');
+            })
+            .catch(err => {
+                console.warn('PDF önizleme yüklenemedi:', url, err);
+                const p = canvas.parentElement;
+                p.innerHTML = `<div class="w-full h-full flex flex-col items-center justify-center bg-gray-50 text-red-400">
+                    <i class="fas fa-file-pdf text-4xl mb-2"></i>
+                    <span class="text-[10px] uppercase tracking-widest">PDF</span>
+                </div>`;
+            });
+    }
+
+    const pdfObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.dataset.rendered) {
+                entry.target.dataset.rendered = '1';
+                renderPdfCanvas(entry.target);
+                pdfObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('canvas[data-pdf]').forEach(c => pdfObserver.observe(c));
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            document.querySelectorAll('canvas[data-pdf]').forEach(c => {
+                c.dataset.rendered = '1';
+                renderPdfCanvas(c);
+            });
+        }, 250);
+    });
+})();
+
+/* ===== KART İÇİ YÜKLEME ===== */
+(function () {
+    document.querySelectorAll('img, canvas[data-pdf]').forEach(el => {
         const parent = el.parentElement;
         if (!parent || parent.querySelector('.media-spinner')) return;
         parent.classList.add('media-wrap');
