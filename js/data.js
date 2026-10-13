@@ -1,4 +1,8 @@
 const CERTIFICATES = [
+    { name:"Python 401", company:"Turkcell", date:"13-10-2026", credential:"dce0a3dafce344c5aacbd48bbbd3cb17", img:"src/cert/turkcell_python401.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/dce0a3dafce344c5aacbd48bbbd3cb17"},    
+    { name:"Python 301", company:"Turkcell", date:"13-10-2026", credential:"65f92f9c6dbf4786b6b84f5b776b3b82", img:"src/cert/turkcell_python301.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/65f92f9c6dbf4786b6b84f5b776b3b82"},
+    { name:"Python 201", company:"Turkcell", date:"13-10-2026", credential:"d00ca56afeb64073b634c0f62a5954e0", img:"src/cert/turkcell_python201.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/d00ca56afeb64073b634c0f62a5954e0"},
+    { name:"Python 101", company:"Turkcell", date:"13-10-2026", credential:"0321d8fe5c8143f6b2cbd11be12118b9", img:"src/cert/turkcell_python101.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/0321d8fe5c8143f6b2cbd11be12118b9"},
     { name:"Doğal Dil İşleme (NLP)",  company:"Turkcell", date:"11-10-2026", credential:"f8a155115dc84265aa68b76241bf3a4b", img:"src/cert/turkcell_nlp.png",       url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/f8a155115dc84265aa68b76241bf3a4b" },
     { name:"CRISP-DM",                company:"Turkcell", date:"11-10-2026", credential:"cf3b35de521c47ce996ce56cc642824f", img:"src/cert/turkcell_crisp.png",   url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/cf3b35de521c47ce996ce56cc642824f" },
     { name:"OpenCV 501",              company:"Turkcell", date:"10-10-2026", credential:"79a230209a904051a3389ae2ff594370", img:"src/cert/turkcell_opencv501.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/79a230209a904051a3389ae2ff594370" },

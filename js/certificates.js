@@ -15,7 +15,7 @@
             ? `<p class="text-xs text-gray-500">${c.date} · ${esc(c.company)}</p>`
             : `<p class="text-xs text-gray-500">${esc(c.company)}</p>`;
         const credentialLine = c.credential
-            ? `<p class="text-[11px] text-gray-400 font-mono mt-1.5 break-all">ID: ${c.credential}</p>`
+            ? `<p class="text-[11px] text-gray-400 font-mono mt-1.5 break-all">ID: ${esc(c.credential).toUpperCase()}</p>`
             : '';
         return `
             <a href="${href}" target="_blank" rel="noopener"
