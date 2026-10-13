@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sertifikalar · İsmail Öksüz</title>
+
+    <title>İsmail Öksüz | Sertifikalar</title>
+    <meta name="description" content="İsmail Öksüz'ün çeşitli platformlardan aldığı sertifikaları.">
+    <meta name="author" content="İsmail Öksüz">
+    <link rel="canonical" href="https://ismailoksuz.github.io/ismail-oksuz/sertifikalar.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sertifikalar — İsmail Öksüz">
+    <meta property="og:description" content="İsmail Öksüz'ün sertifikaları ve tamamladığı eğitimler.">    
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/46068969?v=4">
+    <meta property="og:url" content="https://ismailoksuz.github.io/ismail-oksuz/sertifikalar.html">
+    <meta property="og:locale" content="tr_TR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sertifikalar — İsmail Öksüz">
+    <meta name="twitter:description" content="İsmail Öksüz'ün sertifikaları ve eğitimleri.">
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/46068969?v=4">
+
     <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/46068969?v=4">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Sertifikalar — İsmail Öksüz",
+  "url": "https://ismailoksuz.github.io/ismail-oksuz/sertifikalar.html",
+  "about": { "@id": "https://ismailoksuz.github.io/ismail-oksuz/#person" },
+  "author": { "@id": "https://ismailoksuz.github.io/ismail-oksuz/#person" }
+}
+</script>
 </head>
 <body class="bg-[#fafafa] text-gray-900 loading">
 
@@ -66,7 +93,7 @@
     </section>
 
     <!-- GRID -->
-    <section id="arsiv" class="px-6 lg:px-10 pb-24 pt-32 bg-[#fafafa]" data-theme="light">
+    <section id="arsiv" class="snap-start px-6 lg:px-10 pb-24 pt-32 bg-[#fafafa]" data-theme="light">
         <div class="max-w-7xl mx-auto">
             <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7"></div>
         </div>
@@ -84,89 +111,8 @@
         </div>
     </footer>
 
-    <script>
-    const certs = [
-        { name:"Doğal Dil İşleme (NLP)",  company:"Turkcell", date:"11-10-2026", credential:"f8a155115dc84265aa68b76241bf3a4b", img:"src/cert/pdf/turkcell_nlp.pdf",       isPdf:true, url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/f8a155115dc84265aa68b76241bf3a4b" },
-        { name:"CRISP-DM",                company:"Turkcell", date:"11-10-2026", credential:"cf3b35de521c47ce996ce56cc642824f", img:"src/cert/pdf/turkcell_crispdm.pdf",   isPdf:true, url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/cf3b35de521c47ce996ce56cc642824f" },
-        { name:"OpenCV 501",              company:"Turkcell", date:"10-10-2026", credential:"79a230209a904051a3389ae2ff594370", img:"src/cert/pdf/turkcell_opencv501.pdf", isPdf:true, url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/79a230209a904051a3389ae2ff594370" },
-        { name:"OpenCV 401",              company:"Turkcell", date:"10-10-2026", credential:"d48aa9ec6e43456681dcf9b4e1494fdb", img:"src/cert/pdf/turkcell_opencv401.pdf", isPdf:true, url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/d48aa9ec6e43456681dcf9b4e1494fdb" },
-        { name:"OpenCV 301",              company:"Turkcell", date:"10-10-2026", credential:"c36b1dd91522427d8f8fe9c5dcd66d4a", img:"src/cert/pdf/turkcell_opencv301.pdf", isPdf:true, url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/c36b1dd91522427d8f8fe9c5dcd66d4a" },
-        { name:"OpenCV 201",              company:"Turkcell", date:"10-10-2026", credential:"f7509aaa2fb242e0b8b09b70328203e3", img:"src/cert/pdf/turkcell_opencv201.pdf", isPdf:true, url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/f7509aaa2fb242e0b8b09b70328203e3" },
-        { name:"Prompt Mühendisliği",     company:"Turkcell", date:"10-10-2026", credential:"4a0e461e1b8b4592a259fd5b5adcdc08", img:"src/cert/pdf/turkcell_prompt.pdf",   isPdf:true, url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/4a0e461e1b8b4592a259fd5b5adcdc08" },
-        { name:"REST API",                         company:"HackerRank",           date:"15-01-2026", credential:"F4F653D251C3", img:"src/cert/hacker_restapi.png",                  url:"https://www.hackerrank.com/certificates/f4f653d251c3" },
-        { name:"Write With AI",                    company:"Sololearn",            date:"13-01-2026", credential:"CC-C80OI6YO", img:"https://api2.sololearn.com/v2/certificates/CC-C80OI6YO/image/jpg?t=639039254625045030",                    url:"https://www.sololearn.com/en/certificates/CC-C80OI6YO" },
-        { name:"C#",                               company:"Sololearn",            date:"13-01-2026", credential:"CC-GJDLL4TI", img:"https://api2.sololearn.com/v2/certificates/CC-GJDLL4TI/image/jpg?t=639040949220178170",                      url:"https://www.sololearn.com/en/certificates/CC-GJDLL4TI" },
-        { name:"Python",                           company:"Sololearn",            date:"13-01-2026", credential:"CC-IKOHWKQ1", img:"https://api2.sololearn.com/v2/certificates/CC-IKOHWKQ1/image/jpg?t=639183352114143370",                      url:"https://www.sololearn.com/en/certificates/CC-IKOHWKQ1" },
-        { name:"Data Literacy With AI",            company:"Sololearn",            date:"13-01-2026", credential:"CC-SXSDCNGW", img:"https://api2.sololearn.com/v2/certificates/CC-SXSDCNGW/image/jpg?t=639039268574375180",               url:"https://www.sololearn.com/en/certificates/CC-SXSDCNGW" },
-        { name:"Ethical AI Foundations",           company:"Sololearn",            date:"13-01-2026", credential:"CC-GKYJFZAM", img:"https://api2.sololearn.com/v2/certificates/CC-GKYJFZAM/image/jpg?t=639183352222709960",                  url:"https://www.sololearn.com/en/certificates/CC-GKYJFZAM" },
-        { name:"Visualize Your Data",              company:"Sololearn",            date:"13-01-2026", credential:"CC-B31GV94R", img:"https://api2.sololearn.com/v2/certificates/CC-B31GV94R/image/jpg?t=639183352291997510",              url:"https://www.sololearn.com/en/certificates/CC-B31GV94R" },
-        { name:"LLM Foundations",                  company:"Sololearn",            date:"13-01-2026", credential:"CC-XOEQLSSR", img:"https://api2.sololearn.com/v2/certificates/CC-XOEQLSSR/image/jpg?t=639183352353246430",                        url:"https://www.sololearn.com/en/certificates/CC-XOEQLSSR" },
-        { name:"Machine Learning for Beginners",   company:"Sololearn",            date:"13-01-2026", credential:"CC-HQOFQ0TF", img:"https://api2.sololearn.com/v2/certificates/CC-HQOFQ0TF/image/jpg?t=639183352405323140",                          url:"https://www.sololearn.com/en/certificates/CC-HQOFQ0TF" },
-        { name:"Programming",                      company:"Kaggle",               date:"06-01-2026", credential:"",           img:"src/cert/kaggle_programming.png",              url:"https://www.kaggle.com/learn/certification/ismailoksuz/intro-to-programming" },
-        { name:"Python",                           company:"Kaggle",               date:"06-01-2026", credential:"",           img:"src/cert/kaggle_python.png",                         url:"https://www.kaggle.com/learn/certification/ismailoksuz/python" },
-        { name:"Web Development",                  company:"Sololearn",            date:"02-01-2026", credential:"CC-6AVFSRKK", img:"src/cert/sololearn_webdev.jpg",                     url:"https://www.sololearn.com/en/certificates/CC-6AVFSRKK" },
-        { name:"Prompt Engineering",               company:"Sololearn",            date:"02-01-2026", credential:"CC-GSDWKBPB", img:"src/cert/sololearn_prompt.jpg",          url:"https://www.sololearn.com/en/certificates/CC-GSDWKBPB" },
-        { name:"Advanced Problem Solving",         company:"HackerRank",           date:"30-12-2025", credential:"5CA9C4DC075C", img:"src/cert/hacker_problemsolving.png", url:"https://www.hackerrank.com/certificates/5ca9c4dc075c" },
-        { name:"Advanced SQL",                     company:"HackerRank",           date:"30-12-2025", credential:"FBCCBF6041D6", img:"src/cert/hacker_sqladvanced.png",               url:"https://www.hackerrank.com/certificates/fbccbf6041d6" },
-        { name:"Software Engineer",                company:"HackerRank",           date:"25-12-2025", credential:"AB5D5C491761", img:"src/cert/hacker_softwareengineer.png",          url:"https://www.hackerrank.com/certificates/ab5d5c491761" },
-        { name:"Java",                             company:"HackerRank",           date:"25-05-2025", credential:"A6FDA4F5BC3C", img:"src/cert/hacker_java.png",                 url:"https://www.hackerrank.com/certificates/a6fda4f5bc3c" },
-        { name:"Software Engineer Intern",         company:"HackerRank",           date:"26-10-2023", credential:"A8D9E7211281", img:"src/cert/hacker_softwareengineerintern.png",   url:"https://www.hackerrank.com/certificates/a8d9e7211281" },
-        { name:"Python",                           company:"HackerRank",           date:"20-10-2022", credential:"1F2E4145994A", img:"src/cert/hacker_python.png",               url:"https://www.hackerrank.com/certificates/1f2e4145994a" },
-        { name:"Problem Solving",                  company:"HackerRank",           date:"16-10-2022", credential:"0E44B3BB1078", img:"src/cert/hacker_problem_basic.png",      url:"https://www.hackerrank.com/certificates/0e44b3bb1078" },
-        { name:"CSS",                              company:"HackerRank",           date:"05-08-2022", credential:"69BBC79119EE", img:"src/cert/hacker_css.png",                  url:"https://www.hackerrank.com/certificates/69bbc79119ee" },
-        { name:"SQL",                              company:"HackerRank",           date:"20-04-2022", credential:"90ADF5CDC9B1", img:"src/cert/hacker_sqlbasic.png",                  url:"https://www.hackerrank.com/certificates/90adf5cdc9b1" },
-        { name:"SQL",                              company:"Sololearn",            date:"23-02-2022", credential:"CT-NSZKAUXY", img:"src/cert/sololearn_sql.jpg",                         url:"https://www.sololearn.com/en/certificates/CT-NSZKAUXY" },
-        { name:"StartupTalks — How Startups Get Investment", company:"IEEE Computer Society", date:"14-04-2021", credential:"186621991874", img:"src/cert/certif14.jpg", url:"src/cert/certif14.jpg" },
-        { name:"StartupTalks — Story of an AI Startup",      company:"IEEE Computer Society", date:"14-04-2021", credential:"831220168417", img:"src/cert/certif15.jpg", url:"src/cert/certif15.jpg" },
-        { name:"TechTalks — Fintech",                        company:"IEEE Computer Society", date:"07-04-2021", credential:"08818722442134", img:"src/cert/certif13.jpg", url:"src/cert/certif13.jpg" },
-        { name:"Microsoft Excel — All Levels",     company:"Udemy",                date:"14-07-2020", credential:"UC-B2030BD3-BAC3-4A66-A746-10CEE6335023", img:"src/cert/udemy_excel.jpg",        url:"https://www.udemy.com/certificate/UC-b2030bd3-bac3-4a66-a746-10cee6335023/" },
-        { name:"Online Summits — Industry 4.0",    company:"Öğrenci Kariyeri",     date:"14-05-2020", credential:"",           img:"src/cert/certif9.jpg",                                        url:"src/cert/certif9.jpg" },
-        { name:"Online Summits — Sales & Marketing", company:"Öğrenci Kariyeri",   date:"14-05-2020", credential:"",           img:"src/cert/certif10.jpg",                                       url:"src/cert/certif10.jpg" },
-        { name:"Online Summits — Exclusive",       company:"Öğrenci Kariyeri",     date:"14-05-2020", credential:"",           img:"src/cert/certif12.jpg",                                       url:"src/cert/certif12.jpg" },
-        { name:"Online Summits — Engineering",     company:"Öğrenci Kariyeri",     date:"12-05-2020", credential:"",           img:"src/cert/certif11.jpg",                                       url:"src/cert/certif11.jpg" },
-        { name:"Java",                             company:"Sololearn",            date:"06-05-2020", credential:"CT-8WMFDQ1J", img:"src/cert/sololearn_java.jpg",                        url:"https://www.sololearn.com/en/certificates/CT-8WMFDQ1J" },
-        { name:"Complete SQL Course",              company:"Udemy",                date:"26-04-2020", credential:"UC-420BA578-FF98-4089-9DD8-8C933F892180", img:"src/cert/udemy_sql.jpg",    url:"https://www.udemy.com/certificate/UC-420ba578-ff98-4089-9dd8-8c933f892180/" },
-        { name:"Database & SQL Querying",          company:"Udemy",                date:"26-04-2020", credential:"UC-8CAADE96-994B-46C0-A58D-C922E8CFA544", img:"src/cert/udemy_dbsql.jpg", url:"https://www.udemy.com/certificate/UC-8caade96-994b-46c0-a58d-c922e8cfa544/" },
-        { name:"Java Programming for Beginners",   company:"Udemy",                date:"21-03-2020", credential:"UC-51D73274-45D5-40B2-B551-23A36F1C1466", img:"src/cert/udemy_java.jpg",         url:"https://www.udemy.com/certificate/UC-51d73274-45d5-40b2-b551-23a36f1c1466/" },
-        { name:"Blockchain 101",                   company:"IEEE Computer Society", date:"15-11-2019", credential:"",          img:"src/cert/certif16.png",                                       url:"src/cert/certif16.png" },
-    ];
-
-    const gallery = document.getElementById('gallery');
-    const totalCount = document.getElementById('totalCount');
-    totalCount.textContent = certs.length;
-
-    gallery.innerHTML = certs.map(c => {
-        const href = c.url || c.img;
-        const media = c.isPdf
-            ? `<canvas class="w-full h-auto block" data-pdf="${c.img}"></canvas>`
-            : `<img src="${c.img}" alt="${c.name}" loading="lazy" class="w-full h-auto block">`;
-
-        const metaLine = c.date
-            ? `<p class="text-xs text-gray-500">${c.date} · ${c.company}</p>`
-            : `<p class="text-xs text-gray-500">${c.company}</p>`;
-
-        const credentialLine = c.credential
-            ? `<p class="text-[11px] text-gray-400 font-mono mt-1.5 break-all">ID: ${c.credential}</p>`
-            : '';
-
-        return `
-            <a href="${href}" target="_blank" rel="noopener"
-               class="cert-item group block bg-white border border-gray-200 rounded-xl overflow-hidden">
-                <div class="bg-white overflow-hidden">
-                    ${media}
-                </div>
-                <div class="px-4 py-4 border-t border-gray-100">
-                    <h3 class="text-sm font-semibold text-gray-900 leading-snug group-hover:text-[#0077B6] transition mb-1">
-                        ${c.name}
-                    </h3>
-                    ${metaLine}
-                    ${credentialLine}
-                </div>
-            </a>
-        `;
-    }).join('');
-    </script>
-
-    <script src="app.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/certificates.js"></script>
 </body>
 </html>

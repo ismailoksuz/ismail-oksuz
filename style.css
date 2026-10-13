@@ -126,9 +126,9 @@ body.loading { overflow: hidden; }
 .showcase.theme-blue {
     background: linear-gradient(160deg, #0a1628 0%, #0d2445 100%);
 }
-.showcase.theme-purple {
+/* .showcase.theme-purple {
     background: linear-gradient(160deg, #180a2e 0%, #2d1456 100%);
-}
+} */
 
 /* Tema: Mavi (Projeler) */
 .showcase.theme-blue .chapter-meta .accent { color: #00B4D8; }
@@ -139,12 +139,12 @@ body.loading { overflow: hidden; }
 .showcase.theme-blue .chapter-icon { color: rgba(0, 180, 216, 0.22); }
 
 /* Tema: Mor (Sertifikalar) */
-.showcase.theme-purple .chapter-meta .accent { color: #A78BFA; }
+/* .showcase.theme-purple .chapter-meta .accent { color: #A78BFA; }
 .showcase.theme-purple .chapter-cta { color: #A78BFA; }
 .showcase.theme-purple .chapter-final .final-link { background: #A78BFA; color: #000; }
 .showcase.theme-purple .chapter-final .final-link:hover { background: #C4B5FD; }
 .showcase.theme-purple .showcase-progress-fill { background: #A78BFA; }
-.showcase.theme-purple .chapter-icon { color: rgba(167, 139, 250, 0.22); }
+.showcase.theme-purple .chapter-icon { color: rgba(167, 139, 250, 0.22); } */
 .showcase-track {
     display: flex;
     height: 100%;
@@ -394,11 +394,11 @@ body.loading { overflow: hidden; }
         padding-bottom: 3rem;
     }
 
-    .snap-section.showcase {
-    height: auto;
-    min-height: auto;
-    padding: 0;
-}
+        .snap-section.showcase {
+        height: auto;
+        min-height: auto;
+        padding: 0;
+    }
     .showcase-track {
         flex-direction: column;
         transition: none;
@@ -442,4 +442,130 @@ body.loading { overflow: hidden; }
     justify-content: center;
     user-select: none;
     color: rgba(255,255,255,0.12);
+}
+
+/* ===== SERTİFİKA FİLM ŞERİDİ (MARQUEE) ===== */
+.cert-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    background: #ffffff;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+}
+
+/* .cert-marquee-track {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+    animation: marqueeScroll 180s linear infinite;
+    will-change: transform;
+} */
+
+.cert-marquee:hover .cert-marquee-track {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+/* .cert-marquee-item {
+    flex-shrink: 0;
+    width: 480px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.5s,
+                border-color 0.3s;
+} */
+
+/* .cert-marquee-track {
+    display: flex;
+    gap: 28px;
+    width: max-content;
+    animation: marqueeScroll 240s linear infinite;
+    will-change: transform;
+} */
+
+.cert-marquee-item {
+    flex-shrink: 0;
+    width: 480px;
+    height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #f3f4f6; /* placeholder */
+    border: 1px solid rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.5s,
+                border-color 0.3s;
+}
+
+.cert-marquee-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease,
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-marquee-item img.loaded {
+    opacity: 1;
+}
+
+.cert-marquee-item:hover {
+    transform: scale(1.06) translateY(-4px);
+    box-shadow: 0 30px 60px -25px rgba(0,0,0,0.25);
+    border-color: #0F172A;
+    z-index: 10;
+}
+
+.cert-marquee-item:hover img {
+    transform: scale(1.04);
+}
+
+.cert-marquee-track {
+    display: flex;
+    gap: 28px;
+    width: max-content;
+    animation: marqueeScroll 240s linear infinite;
+    will-change: transform;
+}
+
+@media (max-width: 767px) {
+    .cert-marquee-item {
+        width: 320px;
+        height: 213px;
+        border-radius: 14px;
+    }
+    .cert-marquee-track {
+        gap: 18px;
+        animation-duration: 120s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cert-marquee-track { animation: none; }
 }
