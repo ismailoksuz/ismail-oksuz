@@ -1,4 +1,5 @@
 const CERTIFICATES = [
+    { name:"AI Literacy", company:"IBM", date:"14-10-2026", credential:"", img:"src/cert/ibm_ailiteracy.png", url:"https://skills.yourlearning.ibm.com/certificate/share/0b4755dbadewogICJvYmplY3RUeXBlIiA6ICJBQ1RJVklUWSIsCiAgImxlYXJuZXJDTlVNIiA6ICI5MzIxMjcwUkVHIiwKICAib2JqZWN0SWQiIDogIlBMQU4tMUM5MDMxNTI4ODBDIgp9e2c27aef3e-10"},
     { name:"Python 401", company:"Turkcell", date:"13-10-2026", credential:"dce0a3dafce344c5aacbd48bbbd3cb17", img:"src/cert/turkcell_python401.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/dce0a3dafce344c5aacbd48bbbd3cb17"},    
     { name:"Python 301", company:"Turkcell", date:"13-10-2026", credential:"65f92f9c6dbf4786b6b84f5b776b3b82", img:"src/cert/turkcell_python301.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/65f92f9c6dbf4786b6b84f5b776b3b82"},
     { name:"Python 201", company:"Turkcell", date:"13-10-2026", credential:"d00ca56afeb64073b634c0f62a5954e0", img:"src/cert/turkcell_python201.png", url:"https://gelecegiyazanlar.turkcell.com.tr/sertifika/d00ca56afeb64073b634c0f62a5954e0"},
